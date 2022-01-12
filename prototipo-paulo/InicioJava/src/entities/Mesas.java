@@ -1,20 +1,23 @@
 package entities;
 
 public class Mesas {
-        private String name;
+        private String nome;
         private String email;
+        private int mesa;
 
-        public Mesas(String name, String email) {
-            this.name = name;
+        public Mesas(String name, String email, int mesa) {
+            this.nome = name;
             this.email = email;
+            this.mesa = mesa;
+
         }
 
         public String getName() {
-            return name;
+            return nome;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        public void setName(String nome) {
+            this.nome = nome;
         }
 
         public String getEmail() {
@@ -25,9 +28,13 @@ public class Mesas {
             this.email = email;
         }
 
-        @Override
+        public int getMesa() {return mesa;}
+
+        public void setMesa(int mesa) {this.mesa = mesa;}
+
+    @Override
         public String toString() {
-            return name +
+            return nome +
                     ", " +
                     email ;
         }
