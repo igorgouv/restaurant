@@ -1,12 +1,10 @@
-import {Funcionario} from "./Funcionario.js"
+import {UserComum} from "./UserComum.js"
 import {Admin} from "./Admin.js"
 
 class Sistemainterno {
 
     _senha = 2222;
-    a = Funcionario;
 
-    
     autentica(a){
       var autenticou =  a.autentica(this._senha);
       if(autenticou){
@@ -16,8 +14,14 @@ class Sistemainterno {
       }
     }
 }
+
+// Testando o Sistemainterno
 const lider = new Admin()
 lider.setSenha(2222)
-console.log(lider.getSenha)
+lider.getSenha();
+const aa = new UserComum();
+aa.setSenha(1111)
+aa.getSenha()
 const Si = new Sistemainterno();
 Si.autentica(lider)
+Si.autentica(aa)

@@ -1,4 +1,4 @@
-import {Cardapio} from './Cardapio.js'
+import {Cardapio} from './NotaFiscal.js'
 
 import {Cliente} from './Cliente.js'
 
@@ -54,9 +54,3 @@ export class NotaFiscal extends Cliente{
 
 
 }
-
-const Nf = new NotaFiscal();
-Nf.setNome('igor', '1234', 'igor@email.com')
-Nf.getNome()
-const cart = new Nf.util();
-Nf.cart.addToCartP()

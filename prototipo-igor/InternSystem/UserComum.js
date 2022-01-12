@@ -1,8 +1,7 @@
 import {AutenticavelUtil} from "./AutenticavelUtil.js"
-import {Funcionario} from "./Funcionario.js"
+import {Usuario} from "./Usuario.js"
 
-export class Admin extends Funcionario{
-
+export class UserComum extends Usuario{
     autenticador; 
 
     constructor(){
@@ -21,6 +20,6 @@ export class Admin extends Funcionario{
     }
 
     getSenha(){
-        return this.autenticador.getSenha
+        return this.autenticador.getSenha()
     }
 }

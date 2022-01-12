@@ -14,5 +14,7 @@ export class AutenticavelUtil {
         }
     }
 
-    getSenha() {return this._senha}
+    getSenha() {
+        console.log(`A senha é ${this._senha}`)
+    }
 }
