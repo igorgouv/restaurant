@@ -3,10 +3,12 @@ export class Cliente {
     _cpf;
     _email;
     pedidos;
+    id;
 
 
     constructor(){
         this.pedidos = []
+        this.id++
     }
 
     // Getters
