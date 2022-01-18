@@ -4,7 +4,7 @@ let p3 = 45
 let p4 = 68
 let p5 = 35
 
-const Itens = [
+var Itens = [
     {
         id: 0,
         nome: "vegetariano",
@@ -103,11 +103,12 @@ function menuDaLojaBebidas (){
     })
 }
 
-function metodoTop(nome,quantidade,tipo,) {
+function metodoTop(nome,quantidade,tipo,total) {
     pedidos = {
         Nome : nome,
         quantidade:quantidade,
         tipo:tipo,
+        total:total
     } 
     return pedidos
 }
@@ -115,21 +116,37 @@ menuDaLoja();
 menuDaLojaPromocoes();
 menuDaLojaBebidas();
 var Pedidos=[]
+
+
 atualizarCarrinho =()=>{
     var conteudoDoCarrinho = document.getElementById("carrinhoDeCompras");
     conteudoDoCarrinho.innerHTML = "";
     Itens.map((val) =>{
         if(val.quantidade > 0){
             let x = val.preco*val.quantidade;
-            // Pedidos.push(metodoTop(val.nome,val.quantidade,val.tipo,))
             conteudoDoCarrinho.innerHTML+=`
             <p>`+val.nome+` | quantidade: `+val.quantidade+` | tipo: `+val.tipo+`| preco:`+x.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
             <hr>
             `;
         }
     })
-    efetuandoPagamento();
+    
 }
+notaFiscal =()=>{
+    var conteudoDoCarrinho = document.getElementById("nota");
+    conteudoDoCarrinho.innerHTML = "";
+    Itens.map((val) =>{
+        if(val.quantidade > 0){
+            let x = val.preco*val.quantidade;
+            conteudoDoCarrinho.innerHTML+=`
+            <p>`+val.nome+` | quantidade: `+val.quantidade+` | tipo: `+val.tipo+`| preco:`+x.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
+            <hr>
+            `;
+        }
+    })
+    
+}
+
 
 var links = document.getElementsByClassName("aDoCarrinho");
 for (var i = 0; i < links.length; i++) {
@@ -138,21 +155,17 @@ for (var i = 0; i < links.length; i++) {
         let key = this.getAttribute(`key`);
         Itens[key].quantidade++ ;
         atualizarCarrinho();
+        notaFiscal();
+        total= total+ Itens[key].preco ;
+        efetuandoPagamento();
         return false;
     })
     
 }
 
-var test1 = document.getElementsByClassName("aDoCarrinho");
-for (var i = 0; i < test1.length; i++) {
-    test1[i].addEventListener("click",function(e){
-        e.preventDefault();
-        let key = this.getAttribute(`key`);
-        total= total+ Itens[key].preco ;
-        atualizarCarrinho();
-        return false;
-    })
-}
+
+
+
 
 var links2 = document.getElementsByClassName("retirarDoCarrinho");
 for (var i = 0; i < links2.length; i++) {
@@ -160,27 +173,18 @@ for (var i = 0; i < links2.length; i++) {
         e.preventDefault();
         let key = this.getAttribute(`key`);
         Itens[key].quantidade = Itens[key].quantidade - 1;
+        total= total - Itens[key].preco ;
         atualizarCarrinho();
+        notaFiscal();
+        efetuandoPagamento();
         return false;
     }) 
 }
 
-var test2 = document.getElementsByClassName("retirarDoCarrinho");
-for (var i = 0; i < test2.length; i++) {
-    test2[i].addEventListener("click",function(e){
-        e.preventDefault();
-        let key = this.getAttribute(`key`);
-        total= total - Itens[key].preco ;
-        atualizarCarrinho();
-        return false;
-    })
-    
-}
 
 var total = 0;
 efetuandoPagamento =()=>{
     var efetuandoPagamento = document.getElementById("efetuarPagamento");
-    
     efetuandoPagamento.innerHTML = `
     <form>
     <div class="row mb-3">
@@ -200,7 +204,7 @@ efetuandoPagamento =()=>{
     <div class="col-sm-5">
     <select class="form-select" id="autoSizingSelect">
                           <option selected disabled>selecione</option>
-                          <option value="1">A vista</option>
+                          <option value="">A vista</option>
                           <option value="2">Debito</option>
                           <option value="3">Credito</option>
                           <option value="4">pix</option>
@@ -208,7 +212,9 @@ efetuandoPagamento =()=>{
                   </div>
             </div>  
             <p>total:`+total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+` </p>
-    <button type="submit" class="btn btn-success">efetuar pagamento</button>
+   
     </form>
     `;
 }
+
+

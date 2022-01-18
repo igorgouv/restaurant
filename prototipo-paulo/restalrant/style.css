@@ -32,7 +32,7 @@ body{
 }
 .bgCardapio, .bgvazio{
     padding: 1vw;
-    background-image: url(./img/aaaaa.jpg);
+    background-image: url(./img/bg_carrinho.jpg);
 }
 .bgvazio{
     margin: 4vw;

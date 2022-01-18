@@ -98,11 +98,39 @@
             
           </div>
           <div class="modal-footer">
+            <button type="Button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal2">efetuar pagamento</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog ">
+        <div class="modal-content bgCarrinho text-light">
+          <div class="modal-header bgEscuro">
+            <h5 class="modal-title " id="exampleModalLabel">Meus pedidos</h5>
+            <img class="botaoDeFechar" data-bs-dismiss="modal" aria-label="Close" width="46px" src="./img/botao-x.png" alt="botao de fechar">
+          </div>
+          <div class="modal-body">
+          <div>
+              <h5>Restaurante LaForneria</h5>
+              <h5>Rua X, Bairro X, Cidade X</h5>
+              <h6>tempo - HH:MM:SS</h6><br>
+              <div id="nota" ></div>
+            </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#efetuarPagamentoModal">Efetuar pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
