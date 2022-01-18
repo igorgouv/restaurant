@@ -1,0 +1,54 @@
+
+body{
+    background-image: url(./img/aaaaa.jpg);
+}
+
+
+.espacamentoTop{
+    margin-top: 4vh;
+}
+
+.logo{
+    width: 14vw;
+}
+.corVerde, .espacoVerde{
+    background-color: rgb(56, 122, 56);
+}
+.espacoVerde{
+    height: 4vh;
+    width: 100%;
+    padding: auto;
+    z-index: 1000;
+    border-left:rgb(56, 122, 56) 1vw;
+}
+.cardapio , .bgEscuro{
+    background-color: rgba(0, 0, 0, 0.459);
+}
+
+.cardapioh2{
+    justify-content: center;
+    padding-left:31vw ;
+
+}
+.bgCardapio, .bgvazio{
+    padding: 1vw;
+    background-image: url(./img/aaaaa.jpg);
+}
+.bgvazio{
+    margin: 4vw;
+    padding: auto;
+    width: 100%;
+    height: 12vh;
+}
+
+.bgCarrinho{
+    background-image: url(./img/bg_carrinho.jpg);
+}
+.botaoDeFechar{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 2px rgba(0,0,0,.3);
+}
