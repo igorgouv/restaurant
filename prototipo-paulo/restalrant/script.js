@@ -130,7 +130,7 @@ atualizarCarrinho =()=>{
     })
     
 }
-<<<<<<< HEAD
+
 notaFiscal =()=>{
     var conteudoDoCarrinho = document.getElementById("nota");
     conteudoDoCarrinho.innerHTML = "";
@@ -180,8 +180,6 @@ for (var i = 0; i < links2.length; i++) {
     }) 
 }
 
-=======
->>>>>>> 0977eb8c5fffd93a041981e023afeba7988e4c7b
 
 var total = 0;
 efetuandoPagamento =()=>{

@@ -1,16 +1,5 @@
 export class Cardapio { 
-    static count_pizza;
-    static count_vegetariano;
-    static count_macarrao1;
-    static count_macarrao2;
-    static count_macarrao3;
-    static count_macarrao4;
-
-    constructor(){
-    if(this.constructor == Cardapio){
-        throw new Error("Você não deveria instânciar um objeto do tipo Cardapio diretamente, pois essa é uma classe Abstrata.")
-    }
-    this.Itens = [
+    static Itens = [
         {
             id: 0,
             nome: "Vegetariano",
@@ -60,6 +49,18 @@ export class Cardapio {
             tipo: "prato"
         },
     ]
+    
+    static count_pizza;
+    static count_vegetariano;
+    static count_macarrao1;
+    static count_macarrao2;
+    static count_macarrao3;
+    static count_macarrao4;
+
+    constructor(){
+    if(this.constructor == Cardapio){
+        throw new Error("Você não deveria instânciar um objeto do tipo Cardapio diretamente, pois essa é uma classe Abstrata.")
+    }
     }
 
     
@@ -68,44 +69,44 @@ export class Cardapio {
     //Pizza
 
     static getPizzaId = () => {
-        this.Itens.map((val) =>{
+       return Cardapio.Itens.map((val) =>{
             if(val.id == 5){
-                return Itens[val].id
+                return val.nome
             }
-        })
+         }).filter(notUndefined => notUndefined !== undefined);
     }
 
     static getPizzaNome = () => {
-        this.Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 5){
-                return Itens[val].nome
+                return val.nome
             }
         })
     }
 
 
     static getPizzaQuantidade = () => {
-        this.Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 5){
-                return Itens[val].quantidade
+                return val.quantidade
             }
         })
     }
 
 
     static getPizzaTipo = () => {
-        this.Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 5){
-                return Itens[val].tipo
+                return val.tipo
             }
         })
     }
 
 
     static getPizzaPreco = () => {
-        this.Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 5){
-                return Itens[val].preco
+                return val.preco
             }
         })
     }
@@ -113,42 +114,42 @@ export class Cardapio {
     //Vegetariano
 
     static getVegetarianoId = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 0){
-                return Itens[val].id
+                return val.id
             }
         })
     }
 
 
     static getVegetarianoNome = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 0){
-                return Itens[val].nome
+                return val.nome
             }
         })
     }
 
     static getVegetarianoQuantidade = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 0){
-                return Itens[val].quantidade
+                return val.quantidade
             }
         })
     }
 
     static getVegetarianoTipo = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 0){
-                return Itens[val].tipo
+                return val.tipo
             }
         })
     }
 
     static getVegetarianoPreco = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 0){
-                return Itens[val].preco
+                return val.preco
             }
         })
     }
@@ -156,42 +157,42 @@ export class Cardapio {
     //Macarrão 1
 
     static getMacarrao1Id = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 1){
-                return Itens[val].id
+                return val.id
             }
         })
     }
     
 
     static getMacarrao1Nome = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 1){
-                return Itens[val].nome
+                return val.nome
             }
         })
     }
 
     static getMacarrao1Quantidade = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 1){
-                return Itens[val].quantidade
+                return val.quantidade
             }
         })
     }
 
     static getMacarrao1Tipo = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 1){
-                return Itens[val].tipo
+                return val.tipo
             }
         })
     }
 
     static getMacarrao1Preco = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 1){
-                return Itens[val].preco
+                return val.preco
             }
         })
     }
@@ -199,41 +200,41 @@ export class Cardapio {
     //Macarrão 2
 
     static getMacarrao2Id = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 2){
-                return Itens[val].id
+                return val.id
             }
         })
     }
 
     static getMacarrao2Nome = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 2){
-                return Itens[val].nome
+                return val.nome
             }
         })
     }
 
     static getMacarrao2Quantidade = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 2){
-                return Itens[val].quantidade
+                return val.quantidade
             }
         })
     }
 
     static getMacarrao2Tipo = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 2){
-                return Itens[val].tipo
+                return val.tipo
             }
         })
     }
 
     static getMacarrao2Preco = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 2){
-                return Itens[val].preco
+                return val.preco
             }
         })
     }
@@ -241,9 +242,9 @@ export class Cardapio {
     //Macarrão 3
 
     static getMacarrao3Id = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 3){
-                return Itens[val].id
+                return val.id
             }
         })
     }
@@ -251,33 +252,33 @@ export class Cardapio {
 
 
     static getMacarrao3Nome = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 3){
-                return Itens[val].nome
+                return val.nome
             }
         })
     }
 
     static getMacarrao3Quantidade = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 3){
-                return Itens[val].quantidade
+                return val.quantidade
             }
         })
     }
 
     static getMacarrao3Tipo = () => {
-       Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 3){
-                return Itens[val].tipo
+                return val.tipo
             }
         })
     }
 
     static getMacarrao3Preco = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 3){
-                return Itens[val].preco
+                return val.preco
             }
         })
     }
@@ -285,42 +286,42 @@ export class Cardapio {
     //Macarrão 4
 
     static getMacarrao4Id = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 4){
-                return Itens[val].id
+                return val.id
             }
         })
     }
 
 
     static getMacarrao4Nome = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 4){
-                return Itens[val].nome
+                return val.nome
             }
         })
     }
 
     static getMacarrao4Quantidade = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 4){
-                return Itens[val].quantidade
+                return val.quantidade
             }
         })
     }
 
     static getMacarrao4Tipo = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 4){
-                return Itens[val].tipo
+                return val.tipo
             }
         })
     }
 
     static getMacarrao4Preco = () => {
-        Itens.map((val) =>{
+        Cardapio.Itens.map((val) =>{
             if(val.id == 4){
-                return Itens[val].preco
+                return val.preco
             }
         })
     }

@@ -9,17 +9,18 @@ import {Pedidos} from "./Pedidos.js"
 
 const cliente = new Pedidos("igor", "gouveia@email", "b00000");
 console.log(`O cliente foi cadastrado ${cliente.id} + ${cliente.getNome()} + do email ${cliente.getEmail()} + com o cpf ${cliente.getCpf()} `)
-cliente.addToCartP();
-cliente.addToCartV();
-cliente.addToCartM4();
-cliente.addToCartM3();
-cliente.addToCartM2();
-cliente.addToCartM1();
-console.log(cliente.readPedidos());
-cliente.RemoveCartItemP();
-// cliente.RemoveCartItemM4();
-// cliente.RemoveCartItemM2();
-console.log(cliente.readPedidos());
+// cliente.addToCartP();
+// cliente.addToCartV();
+// cliente.addToCartM4();
+// cliente.addToCartM3();
+// cliente.addToCartM2();
+// cliente.addToCartM1();
+// console.log(cliente.readPedidos());
+console.log(Cardapio.getPizzaId())
+// cliente.RemoveCartItemP();
+// // cliente.RemoveCartItemM4();
+// // cliente.RemoveCartItemM2();
+// console.log(cliente.readPedidos());
 
 
 
