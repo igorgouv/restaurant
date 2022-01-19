@@ -1,6 +1,6 @@
 import {Cliente} from "../Fluxo/Cliente.js";
 import {Admin} from "./Admin.js";
-
+import {Cardapio} from "../Fluxo/Cardapio.js"
 
 const validacaoFront = (user, password) => {
     if(user == "admin" && password == "0000"){
@@ -22,3 +22,5 @@ const validacaoFront = (user, password) => {
 
 validacaoFront("admin", "0000");
 validacaoFront("igor","123")
+
+Cardapio.getPizzaValue();

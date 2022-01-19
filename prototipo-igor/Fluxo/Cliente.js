@@ -5,7 +5,16 @@ export class Cliente extends Usuario {
     constructor(nome, email, cpf){
         super(nome, email, cpf);
         this.pedidos = [];
+        this.id = Cliente.id;
+        this.total = 0;
         Cliente.id += 1;
+    }
+
+    readPedidos = () => {
+        this.pedidos.sort(function(a, b){
+            return a.preco - b.preco
+        })
+        return this.pedidos
     }
 
     autenticar(){

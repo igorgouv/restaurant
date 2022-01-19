@@ -166,7 +166,7 @@ for (var i = 0; i < links.length; i++) {
 
 
 
-
+//For Fluxo Remover Carrinho
 var links2 = document.getElementsByClassName("retirarDoCarrinho");
 for (var i = 0; i < links2.length; i++) {
     links2[i].addEventListener("click",function(e){

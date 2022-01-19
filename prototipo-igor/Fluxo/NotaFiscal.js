@@ -1,54 +1,26 @@
 import {Pedidos} from "./Pedidos.js";
 export class NotaFiscal extends Pedidos{
-    comanda;
     constructor(){
         super();
     }
 
+    mapPedidos = () => {
+        this.pedidos.sort(function(a, b){
+            return a.preco - b.preco
+        })
+        const conteudoDoCarrinho = document.getElementById("nota");
+        conteudoDoCarrinho.innerHTML = "";
+        this.pedidos.map((val) =>{
+            if(val.quantidade > 0){
+                conteudoDoCarrinho.innerHTML+=`
+                <p>`+val.nome+` | quantidade: `+val.quantidade+` | tipo: `+val.tipo+`| preco:`+val.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
+                <hr>
+                `;
+            }
+        })
+    }
+
+    resetCardapio = () => {
+        
+    }
 }
-
-
-// Teste 1
-    // util = (A) => class extends Cardapio{
-
-    //     addToCartP(){
-    //         A.count_pizza++;
-    //         comanda = {
-    //             item: Pizza,
-    //             valor: this.pizza
-    //         }
-    //         this.pedidos.push(comanda)
-    //         console.log("Pizza add")
-    //     };
-
-    //     addToCartL(){
-    //         A.count_lasanha++;
-    //         comanda = {
-    //             item: Lasanha,
-    //             valor: this.lasanha
-    //         }
-    //         this.pedidos.push(comanda)
-    //     };
-
-    //     addToCartM(){
-    //         A.count_macarrao++;
-    //         comanda = {
-    //             item: Macarrao,
-    //             valor: this.macarrao
-    //         }
-    //         this.pedidos.push(comanda)
-    //     };
-
-    //     //Remover do Carrinho
-    //     removeCartP(){
-    //         A.count_pizza-=1
-    //     };
-
-    //     removeCartL(){
-    //         A.count_lasanha-=1
-    //     };
-
-    //     removeCartM(){
-    //         A.count_macarrao-=1
-    //     };
-    // }
