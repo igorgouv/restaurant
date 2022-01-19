@@ -1,28 +1,15 @@
-export class Cliente {
-    _nome;
-    _cpf;
-    _email;
-    pedidos;
-    id;
+import {Usuario} from "../InternSystem/Usuario.js";
 
-
-    constructor(){
-        this.pedidos = []
-        this.id++
+export class Cliente extends Usuario {
+    static id = 0;
+    constructor(nome, email, cpf){
+        super(nome, email, cpf);
+        this.pedidos = [];
+        Cliente.id += 1;
     }
 
-    // Getters
-    getNome(){return this._nome}
+    autenticar(){
+        return true;
+    }
 
-    getCpf(){return this._cpf}
-
-    getEmail(){return this._email}
-
-    // Setters 
-    setNome = (nome) => this._nome = nome;
-
-    setCpf = (cpf) => this._cpf = cpf;
-
-    setEmail = (email) => this._email = email;
-    
 }
