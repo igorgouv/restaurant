@@ -1,6 +1,6 @@
 
 body{
-    background-image: url(./img/aaaaa.jpg);
+    background-image: url();
 }
 
 
@@ -26,13 +26,13 @@ body{
 }
 
 .cardapioh2{
-    justify-content: center;
-    padding-left:31vw ;
-
+   justify-content: center;
+   text-align: center;
 }
+
 .bgCardapio, .bgvazio{
     padding: 1vw;
-    background-image: url(./img/bg_carrinho.jpg);
+    background-image: url(./img/wood\ texture\ -\ Free\ Large\ Images.jpeg);
 }
 .bgvazio{
     margin: 4vw;
@@ -42,7 +42,7 @@ body{
 }
 
 .bgCarrinho{
-    background-image: url(./img/bg_carrinho.jpg);
+    background-image: url(./img/wood\ texture\ -\ Free\ Large\ Images.jpeg);
 }
 .botaoDeFechar{
     position: absolute;
