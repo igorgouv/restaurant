@@ -1,7 +1,10 @@
 
 body{
-    background-image: url();
-}
+    background-image: url(./img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;}
 
 
 .espacamentoTop{
@@ -30,18 +33,13 @@ body{
    text-align: center;
 }
 
-.bgCardapio, .bgvazio{
+.bgCardapio,.bgCarrinho, .bgvazio{
     padding: 1vw;
     background-image: url(./img/wood\ texture\ -\ Free\ Large\ Images.jpeg);
 }
 .bgvazio{
     margin: 4vw;
-    padding: auto;
-    width: 90%;;
-}
-
-.bgCarrinho{
-    background-image: url(./img/wood\ texture\ -\ Free\ Large\ Images.jpeg);
+    width: 90%;
 }
 .botaoDeFechar{
     position: absolute;
@@ -58,4 +56,7 @@ body{
 .redes1,.redes2{
     display: flex;
     padding: 2vw;
+}
+.nnn{
+    display: flex;
 }
