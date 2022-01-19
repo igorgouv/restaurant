@@ -116,8 +116,6 @@ menuDaLoja();
 menuDaLojaPromocoes();
 menuDaLojaBebidas();
 var Pedidos=[]
-
-
 atualizarCarrinho =()=>{
     var conteudoDoCarrinho = document.getElementById("carrinhoDeCompras");
     conteudoDoCarrinho.innerHTML = "";
@@ -132,6 +130,7 @@ atualizarCarrinho =()=>{
     })
     
 }
+<<<<<<< HEAD
 notaFiscal =()=>{
     var conteudoDoCarrinho = document.getElementById("nota");
     conteudoDoCarrinho.innerHTML = "";
@@ -181,10 +180,13 @@ for (var i = 0; i < links2.length; i++) {
     }) 
 }
 
+=======
+>>>>>>> 0977eb8c5fffd93a041981e023afeba7988e4c7b
 
 var total = 0;
 efetuandoPagamento =()=>{
     var efetuandoPagamento = document.getElementById("efetuarPagamento");
+    
     efetuandoPagamento.innerHTML = `
     <form>
     <div class="row mb-3">
@@ -204,7 +206,7 @@ efetuandoPagamento =()=>{
     <div class="col-sm-5">
     <select class="form-select" id="autoSizingSelect">
                           <option selected disabled>selecione</option>
-                          <option value="">A vista</option>
+                          <option value="1">A vista</option>
                           <option value="2">Debito</option>
                           <option value="3">Credito</option>
                           <option value="4">pix</option>
@@ -212,9 +214,64 @@ efetuandoPagamento =()=>{
                   </div>
             </div>  
             <p>total:`+total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+` </p>
-   
     </form>
     `;
 }
+
+
+notaFiscal =()=>{
+    var conteudoDoCarrinho = document.getElementById("nota");
+    conteudoDoCarrinho.innerHTML = "";
+    Itens.map((val) =>{
+        if(val.quantidade > 0){
+            let x = val.preco*val.quantidade;
+            conteudoDoCarrinho.innerHTML+=`
+            <p>`+val.quantidade+` X - `+val.nome+` - `+x.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
+            <hr>
+            
+            `;
+        }    
+    })
+}
+
+mostrarTotal =()=>{
+    var mostrarTotal = document.getElementById("total");
+    mostrarTotal.innerHTML =` - `+total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+}
+
+var links = document.getElementsByClassName("aDoCarrinho");
+for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click",function(e){
+        e.preventDefault();
+        let key = this.getAttribute(`key`);
+        Itens[key].quantidade++ ;
+        atualizarCarrinho();
+        notaFiscal();
+        total= total+ Itens[key].preco ;
+        efetuandoPagamento();
+        mostrarTotal();
+        return false;
+    })    
+    
+}    
+
+
+
+
+
+var links2 = document.getElementsByClassName("retirarDoCarrinho");
+for (var i = 0; i < links2.length; i++) {
+    links2[i].addEventListener("click",function(e){
+        e.preventDefault();
+        let key = this.getAttribute(`key`);
+        Itens[key].quantidade = Itens[key].quantidade - 1;
+        total= total - Itens[key].preco ;
+        atualizarCarrinho();
+        notaFiscal();
+        efetuandoPagamento();
+        mostrarTotal();
+        return false;
+    })     
+}    
 
 

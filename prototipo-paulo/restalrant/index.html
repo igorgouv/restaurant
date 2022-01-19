@@ -57,14 +57,37 @@
                         <div class="row row-cols-1 row-cols-md-3 g-4 "id="bebidas"></div>
                 </div>
             </div>
+            <footer>
           <div class="container bgvazio">
-            <div class="container">
-              <div class="vstask  text-light bgEscuro ">
+            <div class="container text-light">
+              <div class="vstask   bgEscuro ">
                 <h2 class="cardapioh2">Contatos / Endereco </h2>
-                
               </div>
+              <div class="redes">
+                <div class="test">
+              <div class="redes1">
+              <img src="./img/instagram.png" width="50px">
+              <h3 style="margin-top: 1vw;">@La Forneria</h1>
+              </div>
+              <div class="redes2">
+              <img src="./img/facebook.png" width="50px">
+              <h3 style="margin-top: 1vw;">La Forneria</h1>
+              </div>
+              </div>
+              <div class="test">
+                <div class="redes1">
+                <img src="./img/whatsapp.png" width="50px">
+                <h3 style="margin-top: 1vw;">XXXX-XXXX</h1>
+                </div>
+                <div class="redes2">
+                <img src="./img/pino-de-localizacao.png" style="max-width:60px;max-height:60px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.655115152854!2d-34.92598948469955!3d-8.0344484824473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab190a081fd38d%3A0xac9609591276ce41!2sR.%20dos%20Arcos%20-%20Po%C3%A7o%20da%20Panela%2C%20Recife%20-%20PE%2C%2052061-180!5e0!3m2!1spt-BR!2sbr!4v1642615280095!5m2!1spt-BR!2sbr" width="200" height="150" style="border:0;" allowfullscreen="true" loading="lazy" ></iframe>
+                <h3 style="margin-top: 1vw;"></h1>
+                </div>
+            </div>
             </div>
           </div>
+        </footer>
         </div>
       </div>
     <!-- Modals -->
@@ -111,18 +134,19 @@
             <h5 class="modal-title " id="exampleModalLabel">Meus pedidos</h5>
             <img class="botaoDeFechar" data-bs-dismiss="modal" aria-label="Close" width="46px" src="./img/botao-x.png" alt="botao de fechar">
           </div>
-          <div class="modal-body">
-          <div>
+            <div class="modal-body">
               <h5>Restaurante LaForneria</h5>
               <h5>Rua X, Bairro X, Cidade X</h5>
               <h6>tempo - HH:MM:SS</h6><br>
               <div id="nota" ></div>
-            </div>
-          </div>
+              <div class="nnn">
+                <h4>total-----------------------------</h4>
+                <h5 id="total"></h5>
+              </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#efetuarPagamentoModal">Efetuar pedido</button>
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Imprimir</button>
           </div>
         </div>
       </div>
