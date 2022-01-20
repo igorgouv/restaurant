@@ -11,16 +11,25 @@ export class Pedidos extends Cliente {
 
     //Adicionar ao Carrinho!
     addToCartP(){
-        var add = Cardapio.getPizzaQuantidade()
-        this.comanda = {
-            item: Cardapio.getPizzaNome(),
-            quantidade: add++,
-            tipo: Cardapio.getPizzaTipo(),
-            valor: Cardapio.getPizzaPreco()
-        }
-        this.comanda.valor = this.comanda.valor * this.comanda.quantidade;
-        this.total = this.total + this.comanda.valor;
-        this.pedidos.push(this.comanda)
+        this.pedidos.map((val) =>{
+            if(this.pedidos === undefined){
+                var add = Cardapio.getPizzaQuantidade()
+                this.comanda = {
+                    id: Cardapio.getPizzaQuantidade(),
+                    item: Cardapio.getPizzaNome(),
+                    quantidade: add += 1,
+                    tipo: Cardapio.getPizzaTipo(),
+                    valor: Cardapio.getPizzaPreco()
+                }
+                this.pedidos.push(this.comanda)
+                this.comanda.valor = this.comanda.valor * this.comanda.quantidade;
+                this.total = this.total + this.comanda.valor;
+            }else if(val.id == 5){
+                val.quantidade++
+                this.comanda.valor = this.comanda.valor * this.comanda.quantidade;
+                this.total = this.total + this.comanda.valor;
+            }
+        })
         console.log("Pizza add")
     };
 
@@ -193,7 +202,35 @@ export class Pedidos extends Cliente {
         })
     }
 
+
+    AtualizarTotal = () => {
+        this.pedidos.map((item) => {
+            return this.total = this.total + item.valor
+        })
+    }
+
 }
 
 
 // Quando efetuar o pedido **LEMBRAR DE ZERAR TODAS AS QUANTIDADES DO CARDAPIO**
+
+//If de Paulo para debuggar 
+/*        this.pedidos.map((val) =>{
+            if(this.pedidos === undefined){
+                var add = Cardapio.getPizzaQuantidade()
+                this.comanda = {
+                    id: Cardapio.getPizzaQuantidade(),
+                    item: Cardapio.getPizzaNome(),
+                    quantidade: add += 1,
+                    tipo: Cardapio.getPizzaTipo(),
+                    valor: Cardapio.getPizzaPreco()
+                }
+                this.pedidos.push(this.comanda)
+                this.comanda.valor = this.comanda.valor * this.comanda.quantidade;
+                this.total = this.total + this.comanda.valor;
+            }else if(val.id == 5){
+                val.quantidade++
+                this.comanda.valor = this.comanda.valor * this.comanda.quantidade;
+                this.total = this.total + this.comanda.valor;
+            }
+        })  */

@@ -11,7 +11,7 @@ export class LocalStorage extends Pedidos {
     static setLocalStorage = (dbClient) => localStorage.setItem(`db_client`, JSON.stringify(dbClient))
 
     //Criar
-    static createClient = (cliente) => {
+    static createClient = (a) => {
         LocalStorage.clientes.push(cliente)
     }
 
@@ -40,7 +40,7 @@ export class LocalStorage extends Pedidos {
     
         LocalStorage.clientes.map((val)=>{
         if(val.id == key){
-            LocalStorage.clientes.splice(val.id, 1) 
+            LocalStorage.clientes.splice(val[val.id], 1) 
             }
         })
     }

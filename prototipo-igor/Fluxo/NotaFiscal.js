@@ -4,7 +4,7 @@ export class NotaFiscal extends Pedidos{
         super();
     }
 
-    mapPedidos = () => {
+    static mapPedidos = () => {
         this.pedidos.sort(function(a, b){
             return a.preco - b.preco
         })
@@ -23,4 +23,5 @@ export class NotaFiscal extends Pedidos{
     resetCardapio = () => {
         
     }
+
 }

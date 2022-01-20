@@ -236,40 +236,12 @@ mostrarTotal =()=>{
     var mostrarTotal = document.getElementById("total");
     mostrarTotal.innerHTML =` - `+total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 }
-
-var links = document.getElementsByClassName("aDoCarrinho");
-for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener("click",function(e){
-        e.preventDefault();
-        let key = this.getAttribute(`key`);
-        Itens[key].quantidade++ ;
-        atualizarCarrinho();
-        notaFiscal();
-        total= total+ Itens[key].preco ;
-        efetuandoPagamento();
-        mostrarTotal();
-        return false;
-    })    
-    
-}    
+ 
 
 
 
 
 
-var links2 = document.getElementsByClassName("retirarDoCarrinho");
-for (var i = 0; i < links2.length; i++) {
-    links2[i].addEventListener("click",function(e){
-        e.preventDefault();
-        let key = this.getAttribute(`key`);
-        Itens[key].quantidade = Itens[key].quantidade - 1;
-        total= total - Itens[key].preco ;
-        atualizarCarrinho();
-        notaFiscal();
-        efetuandoPagamento();
-        mostrarTotal();
-        return false;
-    })     
-}    
+  
 
 
