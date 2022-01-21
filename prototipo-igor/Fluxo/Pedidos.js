@@ -9,42 +9,80 @@ export class Pedidos extends Cliente {
         this.comanda = {}
     }
 
+    //Zerar Todos cardápios
+    static ResetQuantidades = () => {
+        // All Pizzas
+       return Cardapio.quantidade_pizza0 = 0,
+        Cardapio.quantidade_pizza1 = 0,
+        Cardapio.quantidade_pizza2 = 0,
+        Cardapio.quantidade_pizza3 = 0,
+        Cardapio.quantidade_pizza4 = 0,
+
+        //All Bebidas
+        Cardapio.quantidade_bebida0 = 0,
+        Cardapio.quantidade_bebida1 = 0,
+        Cardapio.quantidade_bebida2 = 0,
+        Cardapio.quantidade_bebida3 = 0,
+        Cardapio.quantidade_bebida4 = 0,
+
+        //All Massas
+        Cardapio.quantidade_massa0 = 0,
+        Cardapio.quantidade_massa1 = 0,
+        Cardapio.quantidade_massa2 = 0,
+        Cardapio.quantidade_massa3 = 0,
+        Cardapio.quantidade_massa4 = 0,
+        Cardapio.quantidade_massa5 = 0,
+        Cardapio.quantidade_massa6 = 0,
+        Cardapio.quantidade_massa7 = 0,
+        Cardapio.quantidade_massa8 = 0,
+        Cardapio.quantidade_massa9 = 0
+    }
+    
+
     //Adicionar ao Carrinho!
-    addToCartP(){
-        this.pedidos.map((val) =>{
-            if(this.pedidos === undefined){
-                var add = Cardapio.getPizzaQuantidade()
-                this.comanda = {
-                    id: Cardapio.getPizzaQuantidade(),
-                    item: Cardapio.getPizzaNome(),
-                    quantidade: add += 1,
-                    tipo: Cardapio.getPizzaTipo(),
-                    valor: Cardapio.getPizzaPreco()
-                }
-                this.pedidos.push(this.comanda)
-                this.comanda.valor = this.comanda.valor * this.comanda.quantidade;
-                this.total = this.total + this.comanda.valor;
-            }else if(val.id == 5){
-                val.quantidade++
-                this.comanda.valor = this.comanda.valor * this.comanda.quantidade;
-                this.total = this.total + this.comanda.valor;
+    addToCartP0 = () => {
+        Cardapio.quantidade_pizza0++
+        if(!this.pedidos){
+            this.comanda = {
+                id: Cardapio.getPizza0Id(),
+                item: Cardapio.getVegetarianoNome(),
+                quantidade: Cardapio.quantidade_pizza0,
+                tipo: Cardapio.getVegetarianoTipo(),
+                valor: Cardapio.getVegetarianoPreco()
             }
-        })
-        console.log("Pizza add")
+            this.comanda.valor = this.comanda.valor * this.comanda.quantidade;
+            this.total = this.total + this.comanda.valor;
+            this.pedidos.push(this.comanda)
+            console.log("Pizza 0 add")
+        }
+
     };
 
     addToCartV(){
-        var add = Cardapio.getVegetarianoQuantidade()
+        Cardapio.quantidade_pizza0 += 1;
         this.comanda = {
+            id: Cardapio.getVegetarianoId(),
             item: Cardapio.getVegetarianoNome(),
-            quantidade: add++,
+            quantidade: Cardapio.quantidade_pizza0,
             tipo: Cardapio.getVegetarianoTipo(),
             valor: Cardapio.getVegetarianoPreco()
         }
-        this.comanda.valor = this.comanda.valor * this.comanda.quantidade;
-        this.total = this.total + this.comanda.valor;
-        this.pedidos.push(this.comanda)
-        console.log("Vegetariano add")
+        console.log("Criou comanda")
+        if(!this.pedidos.length){
+            this.pedidos.push(this.comanda)
+            this.total = this.total + this.comanda.valor;
+            console.log("Inseriu a comanda")
+        } else {
+            this.pedidos.map((val)=>{
+                if(val.id == this.comanda.id){
+                    val.quantidade = Cardapio.quantidade_pizza0;
+                    val.valor = this.comanda.valor * val.quantidade;
+                    this.total = this.total + this.comanda.valor;
+                    console.log("Alterado!")
+                }
+            })
+        }
+        console.log("Fim do add")
     };
 
     addToCartM1(){

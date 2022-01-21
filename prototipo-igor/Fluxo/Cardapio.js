@@ -92,7 +92,7 @@ export class Cardapio {
                 id: 0,
                 nome: "MUSSARELA",
                 img: "https://www.facebook.com/PecoraNeraRecife/photos/a.353793324719749/4551461958286177/?type=3&eid=ARBYQDbd005Re0V0tQ1PJuAdcHkhFPMfZsPB5bUeIt9HXDO6Tfdr6pYXdeD18XRGBwixpqWe9v1YJrOM&__xts__[0]=68.ARAeaU_iW8ib--nkhV2BNY5EgPR0ZOmE6xJ7oCQlu1FybO_oEwzWpR2dKjHMkBZseEYvJiIYj8hPFnf3NLb-0qpQkKk0hx0s_5a6UwCi9kLN2XEmMVpq5QVYDDO7kegBo0TL0_jXWe-nTDaku0Fvpfi5vVlnuxJ3w6vfum4yLzhOXJnz3HcV6aSW22R3BcdOoHab_vULmA9ripCzvRhdf7WsrRyb8F1e27XC5Lu7PC4ifN7E-FLEy8pVXkwwZrShndvBZHtQ9hawzxo2qWbADJ-qWYPywxSpC8CsMic0RbTsJlzwJfw9TQ",
-                quantidade:0,
+                quantidade: Cardapio.quantidade_pizza0,
                 descricao:"Queijo mussarela e azeitonas",
                 preco:35,
                 tipo: "prato"
@@ -177,13 +177,55 @@ export class Cardapio {
             },
         ]
 
-   
-    static count_pizza;
-    static count_vegetariano;
-    static count_macarrao1;
-    static count_macarrao2;
-    static count_macarrao3;
-    static count_macarrao4;
+    // Contadores Static
+    //Pizzas
+    static quantidade_pizza0 = 0;
+    static quantidade_pizza1 = 0; 
+    static quantidade_pizza2 = 0; 
+    static quantidade_pizza3 = 0;
+    static quantidade_pizza4 = 0;  
+    //Bebidas
+    static quantidade_bebida0 = 0;
+    static quantidade_bebida1 = 0;
+    static quantidade_bebida2 = 0;
+    static quantidade_bebida3 = 0;
+    static quantidade_bebida4 = 0;
+    //Massas
+    static quantidade_massa0 = 0;
+    static quantidade_massa1 = 0;
+    static quantidade_massa2 = 0;
+    static quantidade_massa3 = 0;
+    static quantidade_massa4 = 0;
+    static quantidade_massa5 = 0;
+    static quantidade_massa6 = 0;
+    static quantidade_massa7 = 0;
+    static quantidade_massa8 = 0;
+    static quantidade_massa9 = 0;
+    
+    //Contadores Globaispedidos
+    //Pizzas
+    static quantidade_GlobalPizza0 = 0;
+    static quantidade_GlobalPizza1 = 0; 
+    static quantidade_GlobalPizza2 = 0; 
+    static quantidade_GlobalPizza3 = 0;
+    static quantidade_GlobalPizza4 = 0;  
+    //Bebidas
+    static quantidade_GlobalBebida0 = 0;
+    static quantidade_GlobalBebida1 = 0;
+    static quantidade_GlobalBebida2 = 0;
+    static quantidade_GlobalBebida3 = 0;
+    static quantidade_GlobalBebida4 = 0;
+    //Massas
+    static quantidade_GlobalMassa0 = 0;
+    static quantidade_GlobalMassa1 = 0;
+    static quantidade_GlobalMassa2 = 0;
+    static quantidade_GlobalMassa3 = 0;
+    static quantidade_GlobalMassa4 = 0;
+    static quantidade_GlobalMassa5 = 0;
+    static quantidade_GlobalMassa6 = 0;
+    static quantidade_GlobalMassa7 = 0;
+    static quantidade_GlobalMassa8 = 0;
+    static quantidade_GlobalMassa9 = 0;
 
     constructor(){
     if(this.constructor == Cardapio){
