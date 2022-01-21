@@ -3,7 +3,6 @@ let p2 = 28
 let p3 = 45
 let p4 = 68
 let p5 = 35
-
 var Itens = [
     {
         id: 0,
@@ -56,15 +55,23 @@ function menuDaLoja (){
                 <div class="card-body">
                     <h5 class="card-title">`+val.nome+`</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<<<<<<< Updated upstream
                     <a class="aDoCarrinho btn btn-primary" key="`+val.id+`" href="#">adicionar ao carrinho</a> <br>
                     <a class="retirarDoCarrinho btn btn-primary " key="`+val.id+`" href="#">retirar do carrinho</a>
+=======
+                    <br>
+                    <div class="botao-card">
+                    <a class="aDoCarrinho btn btn-primary" key="`+val.id+`" href="#"><b>Adicionar</b></a> <br>
+                    <a class="retirarDoCarrinho btn btn-primary " key="`+val.id+`" href="#"><b>Retirar</b></a>
+                    </div>
+                    <p>
+>>>>>>> Stashed changes
                     <h4> preco:`+val.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</h3>
                 </div>
             </div>
         </div>`;
     })
 }
-
 function menuDaLojaPromocoes (){
     var conteudoDasPromocoes = document.getElementById("Promocoes");
     Itens.map((a) =>{
@@ -75,15 +82,22 @@ function menuDaLojaPromocoes (){
                 <div class="card-body">
                     <h5 class="card-title">`+a.nome+`</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<<<<<<< Updated upstream
                     <a class="aDoCarrinho btn btn-primary" key="`+a.id+`" href="#">adicionar ao carrinho</a> <br>
                     <a class="retirarDoCarrinho btn btn-primary " key="`+a.id+`" href="#">retirar do carrinho</a>
+=======
+                    <br>
+                    <div class="botao-card">
+                    <a class="aDoCarrinho btn btn-primary" key="`+a.id+`" href="#"><b>Adicionar</b></a> <br>
+                    <a class="retirarDoCarrinho btn btn-primary " key="`+a.id+`" href="#"><b>Retirar</b></a>
+                    </div>
+>>>>>>> Stashed changes
                     <h4> preco:`+a.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</h3>
                 </div>
             </div>
         </div>`;
     })
 }
-
 function menuDaLojaBebidas (){
     var conteudoDasbebidas = document.getElementById("bebidas");
     Itens.map((bebidas) =>{
@@ -94,22 +108,29 @@ function menuDaLojaBebidas (){
         <div class="card-body">
         <h5 class="card-title">`+bebidas.nome+`</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<<<<<<< Updated upstream
         <a class="aDoCarrinho btn btn-primary" key="`+bebidas.id+`" href="#">adicionar ao carrinho</a> <br>
         <a class="retirarDoCarrinho btn btn-primary " key="`+bebidas.id+`" href="#">retirar do carrinho</a>
+=======
+        <br>
+        <div class="botao-card">
+        <a class="aDoCarrinho btn btn-primary" key="`+bebidas.id+`" href="#"><b>Adicionar</b></a> <br>
+        <a class="retirarDoCarrinho btn btn-primary " key="`+bebidas.id+`" href="#"><b>Retirar</b></a>
+        </div>
+>>>>>>> Stashed changes
         <h4> preco:`+bebidas.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</h3>
         </div>
         </div>
         </div>`;
     })
 }
-
 function metodoTop(nome,quantidade,tipo,total) {
     pedidos = {
         Nome : nome,
         quantidade:quantidade,
         tipo:tipo,
         total:total
-    } 
+    }
     return pedidos
 }
 menuDaLoja();
@@ -128,9 +149,7 @@ atualizarCarrinho =()=>{
             `;
         }
     })
-    
 }
-
 notaFiscal =()=>{
     var conteudoDoCarrinho = document.getElementById("nota");
     conteudoDoCarrinho.innerHTML = "";
@@ -143,10 +162,7 @@ notaFiscal =()=>{
             `;
         }
     })
-    
 }
-
-
 var links = document.getElementsByClassName("aDoCarrinho");
 for (var i = 0; i < links.length; i++) {
     links[i].addEventListener("click",function(e){
@@ -159,12 +175,7 @@ for (var i = 0; i < links.length; i++) {
         efetuandoPagamento();
         return false;
     })
-    
 }
-
-
-
-
 //For Fluxo Remover Carrinho
 var links2 = document.getElementsByClassName("retirarDoCarrinho");
 for (var i = 0; i < links2.length; i++) {
@@ -177,14 +188,11 @@ for (var i = 0; i < links2.length; i++) {
         notaFiscal();
         efetuandoPagamento();
         return false;
-    }) 
+    })
 }
-
-
 var total = 0;
 efetuandoPagamento =()=>{
     var efetuandoPagamento = document.getElementById("efetuarPagamento");
-    
     efetuandoPagamento.innerHTML = `
     <form>
     <div class="row mb-3">
@@ -210,13 +218,11 @@ efetuandoPagamento =()=>{
                           <option value="4">pix</option>
                       </select>
                   </div>
-            </div>  
+            </div>
             <p>total:`+total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+` </p>
     </form>
     `;
 }
-
-
 notaFiscal =()=>{
     var conteudoDoCarrinho = document.getElementById("nota");
     conteudoDoCarrinho.innerHTML = "";
@@ -226,15 +232,14 @@ notaFiscal =()=>{
             conteudoDoCarrinho.innerHTML+=`
             <p>`+val.quantidade+` X - `+val.nome+` - `+x.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
             <hr>
-            
             `;
-        }    
+        }
     })
 }
-
 mostrarTotal =()=>{
     var mostrarTotal = document.getElementById("total");
     mostrarTotal.innerHTML =` - `+total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+<<<<<<< Updated upstream
 }
  
 
@@ -245,3 +250,6 @@ mostrarTotal =()=>{
   
 
 
+=======
+}
+>>>>>>> Stashed changes

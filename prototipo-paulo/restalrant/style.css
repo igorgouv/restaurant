@@ -5,14 +5,21 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;}
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 .espacamentoTop{
     margin-top: 4vh;
 }
-
 .logo{
+<<<<<<< Updated upstream
     width: 14vw;
+=======
+    height:8vw;
+    background-image: url(./img/wood\ texture\ -\ Free\ Large\ Images.jpeg);
+>>>>>>> Stashed changes
 }
 .corVerde, .espacoVerde{
     background-color: rgb(56, 122, 56);
@@ -25,14 +32,16 @@ body{
     border-left:rgb(56, 122, 56) 1vw;
 }
 .cardapio , .bgEscuro{
+<<<<<<< Updated upstream
     background-color: rgba(0, 0, 0, 0.459);
+=======
+    background-color: rgba(0, 0, 0, 0.7);
+>>>>>>> Stashed changes
 }
-
 .cardapioh2{
    justify-content: center;
    text-align: center;
 }
-
 .bgCardapio,.bgCarrinho, .bgvazio{
     padding: 1vw;
     background-image: url(./img/wood\ texture\ -\ Free\ Large\ Images.jpeg);
@@ -60,3 +69,23 @@ body{
 .nnn{
     display: flex;
 }
+<<<<<<< Updated upstream
+=======
+.botao-card{
+    display: flex;
+    justify-content: space-evenly;
+}
+.botao-card > a{
+   padding:19px;
+}
+.card-body >h4{
+    margin-top: 20px;
+    text-align: center;
+}
+.card > img{
+    height: 200px;
+}
+.modal-body > h5,h6{
+    text-align: center;
+}
+>>>>>>> Stashed changes
