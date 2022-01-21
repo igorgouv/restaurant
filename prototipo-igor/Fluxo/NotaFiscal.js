@@ -19,7 +19,7 @@ export class NotaFiscal extends Pedidos{
             }
         })
     }
-
+    
     resetCardapio = () => {
         
     }

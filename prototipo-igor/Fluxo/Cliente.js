@@ -1,4 +1,4 @@
-import {Usuario} from "../InternSystem/Usuario.js";
+import {Usuario} from "../ValidarSenha/Usuario.js";
 
 export class Cliente extends Usuario {
     static id = 0;
@@ -17,8 +17,6 @@ export class Cliente extends Usuario {
         return this.pedidos
     }
 
-    autenticar(){
-        return true;
-    }
+    
 
 }

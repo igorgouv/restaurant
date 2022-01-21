@@ -50,28 +50,61 @@ export class Pedidos extends Cliente {
             valor: parseFloat(Cardapio.getPizza0Preco())
         }
         console.log("Criou comanda")
+        
         if(!this.pedidos.length){
             this.pedidos.push(this.comanda)
             this.total = this.total + this.comanda.valor;
+            console.log("Total Somando")
             console.log("Sentou na mesa e fez o primeiro pedido")
         } else {
-            this.pedidos.map((val)=>{
-                if(val.id == 10){
-                    val.quantidade = Cardapio.quantidade_pizza0;
-                    val.valor = this.comanda.valor * val.quantidade;
-                    this.total = this.total + this.comanda.valor;
-                    console.log("Quantidade Alterada!")
-                } else {
-                    this.pedidos.push(this.comanda)
-                    this.total = this.total + this.comanda.valor;
-                    console.log("Fez outro pedido")
+            var encontrou = false;
+            for(var index = 0, total=this.pedidos.length; index < total; index++){
+                var obj = this.pedidos[index];
+                if(obj.id == 10){
+                    obj.quantidade = Cardapio.quantidade_pizza0;
+                    encontrou = true;
+                    console.log("Encontrou objeto, Quantidade alterada!")
                 }
-            })
+        
+            }
+            
+            if(encontrou == false){
+                this.pedidos.push(this.comanda)
+                this.total = this.total + this.comanda.valor;
+                console.log("Total somando")
+                console.log("Nao encontrou objeto, inserindo produto")
+            } else {
+                this.pedidos.map((val) => {
+                    if(val.id == 10){
+                        val.valor = Cardapio.getPizza0Preco() * val.quantidade
+                        console.log("Encontrou objeto, Atualizando o valor do pedido")
+                    }
+                })
+                this.total = this.total + obj.valor
+                console.log("Total somando")
+            }         
         }
         console.log("Fim do add")
     };
         
+        //     this.pedidos.map((val)=>{
+        //         if(val.id == 10){
+        //             val.quantidade = Cardapio.quantidade_pizza0;
+        //             val.valor = this.comanda.valor * val.quantidade;
+        //             this.total = this.total + this.comanda.valor;
+        //             console.log("Quantidade Alterada!")
+        //         } else {
+        //             this.pedidos.push(this.comanda)
+        //             this.total = this.total + this.comanda.valor;
+        //             console.log("Fez outro pedido")
+        //         }
+        //     })
+        // }
+        // console.log("Fim do add")
         
+
+
+
         //     Cardapio.quantidade_pizza0 += 1;
         //     this.comanda = {
         //         id: Cardapio.getPizza0Id(),
@@ -173,6 +206,7 @@ export class Pedidos extends Cliente {
 
     addToCartV(){
         Cardapio.quantidade_vegetariano += 1;
+        var encontrou = true;
         this.comanda = {
             id: parseInt(Cardapio.getVegetarianoId()),
             item: Cardapio.getVegetarianoNome(),
@@ -186,18 +220,32 @@ export class Pedidos extends Cliente {
             this.total = this.total + this.comanda.valor;
             console.log("Sentou na mesa e fez o primeiro pedido")
         } else {
-            this.pedidos.map((val)=>{
-                if(val.id == 20){
-                    val.quantidade = Cardapio.quantidade_vegetariano;
-                    val.valor = this.comanda.valor * val.quantidade;
-                    this.total = this.total + this.comanda.valor;
-                    console.log("Quantidade Alterada!")
-                }else {
-                    this.pedidos.push(this.comanda)
-                    this.total = this.total + this.comanda.valor;
-                    console.log("Fez outro pedido")
+            var encontrou = false;
+            for(var index = 0, total=this.pedidos.length; index < total; index++){
+                var obj = this.pedidos[index];
+                if(obj.id == 20){
+                    obj.quantidade = Cardapio.quantidade_vegetariano;
+                    encontrou = true;
+                    console.log("Encontrou objeto, Quantidade alterada!")
                 }
-            })
+        
+            }
+            
+            if(encontrou == false){
+                this.pedidos.push(this.comanda)
+                this.total = this.total + this.comanda.valor;
+                console.log("Total somando")
+                console.log("Nao encontrou objeto, inserindo produto")
+            } else {
+                this.pedidos.map((val) => {
+                    if(val.id == 20){
+                        val.valor = Cardapio.getVegetarianoPreco() * val.quantidade
+                        console.log("Encontrou objeto, Atualizando o valor do pedido")
+                    }
+                })
+                this.total = this.total + obj.valor
+                console.log("Total somando")
+            }         
         }
         console.log("Fim do add")
     };

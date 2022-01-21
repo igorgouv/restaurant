@@ -14,7 +14,6 @@ export class Usuario {
     autenticar(senha){
         return senha == this._senha;
     }
-
     cadastrarSenha(senha){
         this._senha = senha;
     }

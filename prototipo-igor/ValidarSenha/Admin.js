@@ -8,3 +8,4 @@ export class Admin extends Usuario{
         super(_nome, _email, _cpf);
     }
 }
+
