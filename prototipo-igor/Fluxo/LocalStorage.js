@@ -4,11 +4,12 @@ export class LocalStorage extends Pedidos {
     constructor(){
         super();
     }
+    
     static clientes = [];
 
     static getLocalStorage = () => JSON.parse(localStorage.getItem(`db_client`)) ?? []
 
-    static setLocalStorage = (dbClient) => localStorage.setItem(`db_client`, JSON.stringify(dbClient))
+    static setLocalStorage = () => localStorage.setItem(`db_client`, JSON.stringify(dbClient))
 
     //Criar
     static createClient = (a) => {

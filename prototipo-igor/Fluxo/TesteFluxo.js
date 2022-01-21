@@ -36,10 +36,3 @@ console.log(cliente.readPedidos());
 // console.log(cliente.readPedidos());
 
 
-
-addEventListener("click", function(e)=>{
-    e.preventDefault();
-
-})
-
-
