@@ -9,11 +9,11 @@ import {Pedidos} from "./Pedidos.js"
 
 const cliente = new Pedidos("igor", "gouveia@email", "b00000");
 // console.log(`O cliente foi cadastrado ${cliente.id} + ${cliente.getNome()} + do email ${cliente.getEmail()} + com o cpf ${cliente.getCpf()} `)
+cliente.addToCartP0();
+cliente.addToCartP0();
+cliente.addToCartP0();
 cliente.addToCartV();
-// cliente.addToCartV();
-// cliente.addToCartP0();;
-// cliente.addToCartP0();
-// console.log(Cardapio.getPizzaId())
+cliente.addToCartV();
 console.log(cliente.readPedidos());
 
 

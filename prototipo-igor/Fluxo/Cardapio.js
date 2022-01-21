@@ -1,7 +1,7 @@
 export class Cardapio { 
     static Massas = [
         {
-            id: 0,
+            id: 20,
             nome: "Vegetariano",
             img: "http://s2.glbimg.com/EFoi-6iFchrfO3HXBJQMlpoknhM=/smart/e.glbimg.com/og/ed/f/original/2017/11/28/receita-macarrao-com-almondegas-vegano_01.jpg",
             quantidade:0,
@@ -89,7 +89,7 @@ export class Cardapio {
 
     static pizzas = [
             {
-                id: 0,
+                id: 10,
                 nome: "MUSSARELA",
                 img: "https://www.facebook.com/PecoraNeraRecife/photos/a.353793324719749/4551461958286177/?type=3&eid=ARBYQDbd005Re0V0tQ1PJuAdcHkhFPMfZsPB5bUeIt9HXDO6Tfdr6pYXdeD18XRGBwixpqWe9v1YJrOM&__xts__[0]=68.ARAeaU_iW8ib--nkhV2BNY5EgPR0ZOmE6xJ7oCQlu1FybO_oEwzWpR2dKjHMkBZseEYvJiIYj8hPFnf3NLb-0qpQkKk0hx0s_5a6UwCi9kLN2XEmMVpq5QVYDDO7kegBo0TL0_jXWe-nTDaku0Fvpfi5vVlnuxJ3w6vfum4yLzhOXJnz3HcV6aSW22R3BcdOoHab_vULmA9ripCzvRhdf7WsrRyb8F1e27XC5Lu7PC4ifN7E-FLEy8pVXkwwZrShndvBZHtQ9hawzxo2qWbADJ-qWYPywxSpC8CsMic0RbTsJlzwJfw9TQ",
                 quantidade: Cardapio.quantidade_pizza0,
@@ -98,7 +98,7 @@ export class Cardapio {
                 tipo: "prato"
             },
             {
-                id: 1,
+                id: 11,
                 nome: "CALABRESA",
                 img: "https://www.facebook.com/photo/?fbid=321621046639118&set=pcb.321621096639113",
                 quantidade:0,
@@ -107,7 +107,7 @@ export class Cardapio {
                 tipo: "prato"
             },
             {
-                id: 2,
+                id: 12,
                 nome: "PORTUGUESA",
                 img: "https://deliveryapp.neemo.com.br/delivery/7120/menu#img-650467",
                 quantidade:0,
@@ -116,7 +116,7 @@ export class Cardapio {
                 tipo: "prato"
             },
             {
-                id: 3,
+                id: 13,
                 nome: "ATUM",
                 img: "https://www.sabornamesa.com.br/media/k2/items/cache/9e9e1351d6a763151a8613c1dd10d427_XL.jphttps://www.google.com/url?sa=i&url=https%3A%2F%2Fxtudoreceitas.com%2Freceita-de-rondelli-de-festa%2F&psig=AOvVaw07ewwzYfZQWOm9Sgk3MMfS&ust=1642703513262000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJDhu9G5vvUCFQAAAAAdAAAAABAJ",
                 quantidade:0,
@@ -125,7 +125,7 @@ export class Cardapio {
                 tipo: "prato"
             },
             {
-                id: 4,
+                id: 14,
                 nome: "NAPOLITANA",
                 img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.receitasdemae.com.br%2Freceitas%2Fnhoque-de-batata-ao-sugo%2F&psig=AOvVaw1_qhFhhH07-GHHWnZW0oIq&ust=1642704037278000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLDLlNC7vvUCFQAAAAAdAAAAABAD",
                 quantidade:0,
@@ -136,7 +136,7 @@ export class Cardapio {
     ]
         static bebidas = [
             {
-                id: 0,
+                id: 15,
                 nome: "Agua Mineral",
                 img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Friomarkennedyonline.com.br%2Floja%2Fagua-mineral-sem-gas-indaia-garrafa-330-ml%2F&psig=AOvVaw1trMM5SC3if8EaFp4KYi-x&ust=1642706687422000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIDuw7zFvvUCFQAAAAAdAAAAABAJ",
                 quantidade:0,
@@ -144,7 +144,7 @@ export class Cardapio {
                 tipo: "liquido"
             },
             {
-                id: 1,
+                id: 16,
                 nome: "H2OH",
                 img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.damataleo.com.br%2Fproduto%2Fdetalhe%2F61%2Fh20&psig=AOvVaw1ejoz_PTqkAxLmzGbyAZsy&ust=1642706734344000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKje-s_FvvUCFQAAAAAdAAAAABAD",
                 quantidade:0,
@@ -152,7 +152,7 @@ export class Cardapio {
                 tipo: "liquido"
             },
             {
-                id: 2,
+                id: 17,
                 nome: "Refrigerante 1 Litro",
                 img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fnossomarket.com.br%2Fpraca-de-alimentacao%2F512-refrigerante-1l.html&psig=AOvVaw3_i9OFFWOvGt1DNO6zV_LP&ust=1642706776136000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjJtuHFvvUCFQAAAAAdAAAAABAD",
                 quantidade:0,
@@ -160,7 +160,7 @@ export class Cardapio {
                 tipo: "liquido"
             },
             {
-                id: 3,
+                id: 18,
                 nome: "Jarra de Suco 1 Litro",
                 img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fproduto.mercadolivre.com.br%2FMLB-1190721642-jarra-nobile-15-l-cisper-vidro-suco-agua-2-pecas-_JM&psig=AOvVaw07k7vmSiOjAmbTAJLR-Xmv&ust=1642706824818000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIDbtvrFvvUCFQAAAAAdAAAAABAJ",
                 quantidade:0,
@@ -168,7 +168,7 @@ export class Cardapio {
                 tipo: "liquido"
             },
             {
-                id: 4,
+                id: 19,
                 nome: "Vinho",
                 img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.divvino.com.br%2Fblog%2Fvinho-inverno%2F&psig=AOvVaw3A53ViLCfenCEVDYdhTbv2&ust=1642706864530000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjIvI7GvvUCFQAAAAAdAAAAABAD",
                 quantidade:0,
@@ -191,7 +191,7 @@ export class Cardapio {
     static quantidade_bebida3 = 0;
     static quantidade_bebida4 = 0;
     //Massas
-    static quantidade_massa0 = 0;
+    static quantidade_vegetariano = 0;
     static quantidade_massa1 = 0;
     static quantidade_massa2 = 0;
     static quantidade_massa3 = 0;
@@ -202,7 +202,7 @@ export class Cardapio {
     static quantidade_massa8 = 0;
     static quantidade_massa9 = 0;
     
-    //Contadores Globaispedidos
+    //Contadores Globais de pedidos feitos
     //Pizzas
     static quantidade_GlobalPizza0 = 0;
     static quantidade_GlobalPizza1 = 0; 
@@ -240,7 +240,7 @@ export class Cardapio {
     //Vegetariano
     static getVegetarianoId = () => {
         return Cardapio.Massas.map((val) =>{
-            if(val.id == 0){
+            if(val.id == 20){
                 return val.id
             }
         }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -249,23 +249,16 @@ export class Cardapio {
 
     static getVegetarianoNome = () => {
         return Cardapio.Massas.map((val) =>{
-            if(val.id == 0){
+            if(val.id == 20){
                 return val.nome
             }
         }).filter(notUndefined => notUndefined !== undefined).join(', ');
     }
 
-    static getVegetarianoQuantidade = () => {
-        return Cardapio.Massas.map((val) =>{
-            if(val.id == 0){
-                return val.quantidade
-            }
-        }).filter(notUndefined => notUndefined !== undefined).join(', ');
-    }
 
     static getVegetarianoTipo = () => {
         return Cardapio.Massas.map((val) =>{
-            if(val.id == 0){
+            if(val.id == 20){
                 return val.tipo
             }
         }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -273,7 +266,7 @@ export class Cardapio {
 
     static getVegetarianoPreco = () => {
         return Cardapio.Massas.map((val) =>{
-            if(val.id == 0){
+            if(val.id == 20){
                 return val.preco
             }
         }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -669,7 +662,7 @@ export class Cardapio {
         //Pizza0
         static getPizza0Id = () => {
         return Cardapio.pizzas.map((val) =>{
-                if(val.id == 0){
+                if(val.id == 10){
                     return val.id
                     
                 }
@@ -678,25 +671,15 @@ export class Cardapio {
 
         static getPizza0Nome = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 0){
+                if(val.id == 10){
                     return val.nome
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
         }
 
-
-        static getPizza0Quantidade = () => {
-            return Cardapio.pizzas.map((val) =>{
-                if(val.id == 0){
-                    return val.quantidade
-                }
-            }).filter(notUndefined => notUndefined !== undefined).join(', ');
-        }
-
-
         static getPizza0Tipo = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 0){
+                if(val.id == 10){
                     return val.tipo
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -705,7 +688,7 @@ export class Cardapio {
 
         static getPizza0Preco = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 0){
+                if(val.id == 10){
                     return val.preco
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -714,7 +697,7 @@ export class Cardapio {
             //Pizza1
         static getPizza1Id = () => {
         return Cardapio.pizzas.map((val) =>{
-                if(val.id == 1){
+                if(val.id == 11){
                     return val.id
                     
                 }
@@ -723,25 +706,15 @@ export class Cardapio {
 
         static getPizza1Nome = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 1){
+                if(val.id == 11){
                     return val.nome
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
         }
 
-
-        static getPizza1Quantidade = () => {
-            return Cardapio.pizzas.map((val) =>{
-                if(val.id == 1){
-                    return val.quantidade
-                }
-            }).filter(notUndefined => notUndefined !== undefined).join(', ');
-        }
-
-
         static getPizza1Tipo = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 1){
+                if(val.id == 11){
                     return val.tipo
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -750,7 +723,7 @@ export class Cardapio {
 
         static getPizza1Preco = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 1){
+                if(val.id == 11){
                     return val.preco
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -759,7 +732,7 @@ export class Cardapio {
             //Pizza2
         static getPizza2Id = () => {
         return Cardapio.pizzas.map((val) =>{
-                if(val.id == 2){
+                if(val.id == 12){
                     return val.id
                     
                 }
@@ -768,17 +741,8 @@ export class Cardapio {
 
         static getPizza2Nome = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 2){
+                if(val.id == 12){
                     return val.nome
-                }
-            }).filter(notUndefined => notUndefined !== undefined).join(', ');
-        }
-
-
-        static getPizza2Quantidade = () => {
-            return Cardapio.pizzas.map((val) =>{
-                if(val.id == 2){
-                    return val.quantidade
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
         }
@@ -786,7 +750,7 @@ export class Cardapio {
 
         static getPizza2Tipo = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 2){
+                if(val.id == 12){
                     return val.tipo
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -795,7 +759,7 @@ export class Cardapio {
 
         static getPizza2Preco = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 2){
+                if(val.id == 12){
                     return val.preco
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -804,7 +768,7 @@ export class Cardapio {
             //Pizza3
         static getPizza3Id = () => {
         return Cardapio.pizzas.map((val) =>{
-                if(val.id == 3){
+                if(val.id == 13){
                     return val.id
                     
                 }
@@ -813,17 +777,8 @@ export class Cardapio {
 
         static getPizza3Nome = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 3){
+                if(val.id == 13){
                     return val.nome
-                }
-            }).filter(notUndefined => notUndefined !== undefined).join(', ');
-        }
-
-
-        static getPizza3Quantidade = () => {
-            return Cardapio.pizzas.map((val) =>{
-                if(val.id == 3){
-                    return val.quantidade
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
         }
@@ -831,7 +786,7 @@ export class Cardapio {
 
         static getPizza3Tipo = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 3){
+                if(val.id == 13){
                     return val.tipo
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -840,7 +795,7 @@ export class Cardapio {
 
         static getPizza3Preco = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 3){
+                if(val.id == 13){
                     return val.preco
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -849,7 +804,7 @@ export class Cardapio {
             //Pizza4
         static getPizza4Id = () => {
         return Cardapio.pizzas.map((val) =>{
-                if(val.id == 4){
+                if(val.id == 14){
                     return val.id
                     
                 }
@@ -858,25 +813,15 @@ export class Cardapio {
 
         static getPizza4Nome = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 4){
+                if(val.id == 14){
                     return val.nome
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
         }
 
-
-        static getPizza4Quantidade = () => {
-            return Cardapio.pizzas.map((val) =>{
-                if(val.id == 4){
-                    return val.quantidade
-                }
-            }).filter(notUndefined => notUndefined !== undefined).join(', ');
-        }
-
-
         static getPizza4Tipo = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 4){
+                if(val.id == 14){
                     return val.tipo
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -885,7 +830,7 @@ export class Cardapio {
 
         static getPizza4Preco = () => {
             return Cardapio.pizzas.map((val) =>{
-                if(val.id == 4){
+                if(val.id == 14){
                     return val.preco
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -896,7 +841,7 @@ export class Cardapio {
         //Bebida0
         static getBebida0Id = () => {
         return Cardapio.bebidas.map((val) =>{
-                if(val.id == 0){
+                if(val.id == 15){
                     return val.id
                     
                 }
@@ -905,25 +850,15 @@ export class Cardapio {
 
         static getBebida0Nome = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 0){
+                if(val.id == 15){
                     return val.nome
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
         }
 
-
-        static getBebida0Quantidade = () => {
-            return Cardapio.bebidas.map((val) =>{
-                if(val.id == 0){
-                    return val.quantidade
-                }
-            }).filter(notUndefined => notUndefined !== undefined).join(', ');
-        }
-
-
         static getBebida0Tipo = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 0){
+                if(val.id == 15){
                     return val.tipo
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -932,7 +867,7 @@ export class Cardapio {
 
         static getBebida0Preco = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 0){
+                if(val.id == 15){
                     return val.preco
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -941,7 +876,7 @@ export class Cardapio {
             //Bebida1
         static getBebida1Id = () => {
         return Cardapio.bebidas.map((val) =>{
-                if(val.id == 1){
+                if(val.id == 16){
                     return val.id
                     
                 }
@@ -950,25 +885,15 @@ export class Cardapio {
 
         static getBebida1Nome = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 1){
+                if(val.id == 16){
                     return val.nome
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
         }
 
-
-        static getBebida1Quantidade = () => {
-            return Cardapio.bebidas.map((val) =>{
-                if(val.id == 1){
-                    return val.quantidade
-                }
-            }).filter(notUndefined => notUndefined !== undefined).join(', ');
-        }
-
-
         static getBebida1Tipo = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 1){
+                if(val.id == 16){
                     return val.tipo
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -977,7 +902,7 @@ export class Cardapio {
 
         static getBebida1Preco = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 1){
+                if(val.id == 16){
                     return val.preco
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -986,7 +911,7 @@ export class Cardapio {
             //Bebida2
         static getBebida2Id = () => {
         return Cardapio.bebidas.map((val) =>{
-                if(val.id == 2){
+                if(val.id == 17){
                     return val.id
                     
                 }
@@ -995,25 +920,15 @@ export class Cardapio {
 
         static getBebida2Nome = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 2){
+                if(val.id == 17){
                     return val.nome
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
         }
 
-
-        static getBebida2Quantidade = () => {
-            return Cardapio.bebidas.map((val) =>{
-                if(val.id == 2){
-                    return val.quantidade
-                }
-            }).filter(notUndefined => notUndefined !== undefined).join(', ');
-        }
-
-
         static getBebida2Tipo = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 2){
+                if(val.id == 17){
                     return val.tipo
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -1022,7 +937,7 @@ export class Cardapio {
 
         static getBebida2Preco = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 2){
+                if(val.id == 17){
                     return val.preco
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -1031,7 +946,7 @@ export class Cardapio {
             //Bebida3
         static getBebida3Id = () => {
         return Cardapio.bebidas.map((val) =>{
-                if(val.id == 3){
+                if(val.id == 18){
                     return val.id
                     
                 }
@@ -1040,7 +955,7 @@ export class Cardapio {
 
         static getBebida3Nome = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 3){
+                if(val.id == 18){
                     return val.nome
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -1049,7 +964,7 @@ export class Cardapio {
 
         static getBebida3Quantidade = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 3){
+                if(val.id == 18){
                     return val.quantidade
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -1058,7 +973,7 @@ export class Cardapio {
 
         static getBebida3Tipo = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 3){
+                if(val.id == 18){
                     return val.tipo
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -1067,7 +982,7 @@ export class Cardapio {
 
         static getBebida3Preco = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 3){
+                if(val.id == 18){
                     return val.preco
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -1076,7 +991,7 @@ export class Cardapio {
             //Bebida4
         static getBebida4Id = () => {
         return Cardapio.bebidas.map((val) =>{
-                if(val.id == 4){
+                if(val.id == 19){
                     return val.id
                     
                 }
@@ -1085,25 +1000,15 @@ export class Cardapio {
 
         static getBebida4Nome = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 4){
+                if(val.id == 19){
                     return val.nome
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
         }
 
-
-        static getBebida4Quantidade = () => {
-            return Cardapio.bebidas.map((val) =>{
-                if(val.id == 4){
-                    return val.quantidade
-                }
-            }).filter(notUndefined => notUndefined !== undefined).join(', ');
-        }
-
-
         static getBebida4Tipo = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 4){
+                if(val.id == 19){
                     return val.tipo
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
@@ -1112,11 +1017,9 @@ export class Cardapio {
 
         static getBebida4Preco = () => {
             return Cardapio.bebidas.map((val) =>{
-                if(val.id == 4){
+                if(val.id == 19){
                     return val.preco
                 }
             }).filter(notUndefined => notUndefined !== undefined).join(', ');
-        }
-
-        
+        }   
 } 

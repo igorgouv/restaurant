@@ -41,44 +41,161 @@ export class Pedidos extends Cliente {
 
     //Adicionar ao Carrinho!
     addToCartP0 = () => {
-        Cardapio.quantidade_pizza0++
-        if(!this.pedidos){
-            this.comanda = {
-                id: Cardapio.getPizza0Id(),
-                item: Cardapio.getVegetarianoNome(),
-                quantidade: Cardapio.quantidade_pizza0,
-                tipo: Cardapio.getVegetarianoTipo(),
-                valor: Cardapio.getVegetarianoPreco()
-            }
-            this.comanda.valor = this.comanda.valor * this.comanda.quantidade;
-            this.total = this.total + this.comanda.valor;
-            this.pedidos.push(this.comanda)
-            console.log("Pizza 0 add")
-        }
-
-    };
-
-    addToCartV(){
         Cardapio.quantidade_pizza0 += 1;
         this.comanda = {
-            id: Cardapio.getVegetarianoId(),
-            item: Cardapio.getVegetarianoNome(),
+            id: parseInt(Cardapio.getPizza0Id()),
+            item: Cardapio.getPizza0Nome(),
             quantidade: Cardapio.quantidade_pizza0,
-            tipo: Cardapio.getVegetarianoTipo(),
-            valor: Cardapio.getVegetarianoPreco()
+            tipo: Cardapio.getPizza0Tipo(),
+            valor: parseFloat(Cardapio.getPizza0Preco())
         }
         console.log("Criou comanda")
         if(!this.pedidos.length){
             this.pedidos.push(this.comanda)
             this.total = this.total + this.comanda.valor;
-            console.log("Inseriu a comanda")
+            console.log("Sentou na mesa e fez o primeiro pedido")
         } else {
             this.pedidos.map((val)=>{
-                if(val.id == this.comanda.id){
+                if(val.id == 10){
                     val.quantidade = Cardapio.quantidade_pizza0;
                     val.valor = this.comanda.valor * val.quantidade;
                     this.total = this.total + this.comanda.valor;
-                    console.log("Alterado!")
+                    console.log("Quantidade Alterada!")
+                } else {
+                    this.pedidos.push(this.comanda)
+                    this.total = this.total + this.comanda.valor;
+                    console.log("Fez outro pedido")
+                }
+            })
+        }
+        console.log("Fim do add")
+    };
+        
+        
+        //     Cardapio.quantidade_pizza0 += 1;
+        //     this.comanda = {
+        //         id: Cardapio.getPizza0Id(),
+        //         item: Cardapio.getPizza0Nome(),
+        //         quantidade: Cardapio.quantidade_pizza0,
+        //         tipo: Cardapio.getPizza0Tipo(),
+        //         valor: Cardapio.getPizza0Preco()
+        //     }
+        //     console.log("Criou comanda")
+        //     if(!this.pedidos.length){
+        //         this.pedidos.push(this.comanda)
+        //         this.total = this.total + this.comanda.valor;
+        //         console.log("Inseriu a comanda")
+        //     } else {
+        //         this.pedidos.map((val)=>{
+        //             if(val.id == this.comanda.id){
+        //                 val.quantidade = Cardapio.quantidade_pizza0;
+        //                 val.valor = this.comanda.valor * val.quantidade;
+        //                 this.total = this.total + this.comanda.valor;
+        //                 console.log("Alterado!")
+        //             }
+        //         })
+        //     }
+        //     console.log("Fim do add")
+        // };
+
+
+
+    //     Cardapio.quantidade_pizza0 += 1;
+    //     this.comanda = {
+    //         id: parseInt(Cardapio.getPizza0Id()),
+    //         item: Cardapio.getPizza0Nome(),
+    //         quantidade: Cardapio.quantidade_pizza0,
+    //         tipo: Cardapio.getPizza0Tipo(),
+    //         valor: parseFloat(Cardapio.getPizza0Preco())
+    //     }
+    //     console.log("Criou comanda")
+    //     if(!this.pedidos.length){
+    //         this.pedidos.push(this.comanda)
+    //         this.total = this.total + this.comanda.valor;
+    //         console.log("Sentou na mesa e fez o primeiro pedido")
+    //     } else {
+    //         this.pedidos.map((val)=>{
+    //             if(val.id == 10){
+    //                 val.quantidade = Cardapio.quantidade_pizza0;
+    //                 val.valor = this.comanda.valor * val.quantidade;
+    //                 this.total = this.total + this.comanda.valor;
+    //                 console.log("Quantidade Alterada!")
+    //             }
+    //         })
+    //         this.pedidos.map((val)=>{
+    //             if(val.id !== 10){
+    //             this.pedidos.push(this.comanda)
+    //             this.total = this.total + this.comanda.valor;
+    //             console.log("Fez outro pedido")  
+    //             }
+    //         })
+    //     }
+    //     console.log("Fim do add")
+    // };
+
+    // addToCartV = () => {
+    //     Cardapio.quantidade_vegetariano += 1;
+    //     this.comanda = {
+    //         id: parseInt(Cardapio.getVegetarianoId()),
+    //         item: Cardapio.getVegetarianoNome(),
+    //         quantidade: Cardapio.quantidade_vegetariano,
+    //         tipo: Cardapio.getVegetarianoTipo(),
+    //         valor: parseFloat(Cardapio.getVegetarianoPreco())
+    //     }
+    //     console.log("Criou comanda")
+    //     if(!this.pedidos.length){
+    //         this.pedidos.push(this.comanda)
+    //         this.total = this.total + this.comanda.valor;
+    //         console.log("Sentou na mesa e fez o primeiro pedido")
+    //     } else {
+    //         this.pedidos.map((val)=>{
+    //             if(val.id == 20){
+    //                 val.quantidade = Cardapio.quantidade_vegetariano;
+    //                 val.valor = this.comanda.valor * val.quantidade;
+    //                 this.total = this.total + this.comanda.valor;
+    //                 console.log("Quantidade Alterada!")
+    //             } else{
+    //                 return;
+    //             }
+    //         })
+    //         this.pedidos.map((val)=>{
+    //             if(val.id !== 20){
+    //             this.pedidos.push(this.comanda)
+    //             this.total = this.total + this.comanda.valor;
+    //             console.log("Fez outro pedido")  
+    //             } else {
+    //                 return;
+    //             }
+    //         })
+    //     }
+    //     console.log("Fim do add")
+    // };
+
+    addToCartV(){
+        Cardapio.quantidade_vegetariano += 1;
+        this.comanda = {
+            id: parseInt(Cardapio.getVegetarianoId()),
+            item: Cardapio.getVegetarianoNome(),
+            quantidade: Cardapio.quantidade_vegetariano,
+            tipo: Cardapio.getVegetarianoTipo(),
+            valor: parseFloat(Cardapio.getVegetarianoPreco())
+        }
+        console.log("Criou comanda")
+        if(!this.pedidos.length){
+            this.pedidos.push(this.comanda)
+            this.total = this.total + this.comanda.valor;
+            console.log("Sentou na mesa e fez o primeiro pedido")
+        } else {
+            this.pedidos.map((val)=>{
+                if(val.id == 20){
+                    val.quantidade = Cardapio.quantidade_vegetariano;
+                    val.valor = this.comanda.valor * val.quantidade;
+                    this.total = this.total + this.comanda.valor;
+                    console.log("Quantidade Alterada!")
+                }else {
+                    this.pedidos.push(this.comanda)
+                    this.total = this.total + this.comanda.valor;
+                    console.log("Fez outro pedido")
                 }
             })
         }
