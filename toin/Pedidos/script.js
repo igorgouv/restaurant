@@ -158,6 +158,7 @@ for (var i = 0; i < links.length; i++) {
         notaFiscal();
         total= total+ Itens[key].preco ;
         efetuandoPagamento();
+        mostrarTotal();
         return false;
     })
 }
@@ -172,6 +173,7 @@ for (var i = 0; i < links2.length; i++) {
         atualizarCarrinho();
         notaFiscal();
         efetuandoPagamento();
+        mostrarTotal();
         return false;
     })
 }
