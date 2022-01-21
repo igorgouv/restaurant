@@ -55,17 +55,12 @@ function menuDaLoja (){
                 <div class="card-body">
                     <h5 class="card-title">`+val.nome+`</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-<<<<<<< Updated upstream
-                    <a class="aDoCarrinho btn btn-primary" key="`+val.id+`" href="#">adicionar ao carrinho</a> <br>
-                    <a class="retirarDoCarrinho btn btn-primary " key="`+val.id+`" href="#">retirar do carrinho</a>
-=======
                     <br>
                     <div class="botao-card">
                     <a class="aDoCarrinho btn btn-primary" key="`+val.id+`" href="#"><b>Adicionar</b></a> <br>
                     <a class="retirarDoCarrinho btn btn-primary " key="`+val.id+`" href="#"><b>Retirar</b></a>
                     </div>
                     <p>
->>>>>>> Stashed changes
                     <h4> preco:`+val.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</h3>
                 </div>
             </div>
@@ -82,18 +77,13 @@ function menuDaLojaPromocoes (){
                 <div class="card-body">
                     <h5 class="card-title">`+a.nome+`</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-<<<<<<< Updated upstream
-                    <a class="aDoCarrinho btn btn-primary" key="`+a.id+`" href="#">adicionar ao carrinho</a> <br>
-                    <a class="retirarDoCarrinho btn btn-primary " key="`+a.id+`" href="#">retirar do carrinho</a>
-=======
                     <br>
                     <div class="botao-card">
                     <a class="aDoCarrinho btn btn-primary" key="`+a.id+`" href="#"><b>Adicionar</b></a> <br>
                     <a class="retirarDoCarrinho btn btn-primary " key="`+a.id+`" href="#"><b>Retirar</b></a>
                     </div>
->>>>>>> Stashed changes
                     <h4> preco:`+a.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</h3>
-                </div>
+                    </div>
             </div>
         </div>`;
     })
@@ -108,16 +98,11 @@ function menuDaLojaBebidas (){
         <div class="card-body">
         <h5 class="card-title">`+bebidas.nome+`</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-<<<<<<< Updated upstream
-        <a class="aDoCarrinho btn btn-primary" key="`+bebidas.id+`" href="#">adicionar ao carrinho</a> <br>
-        <a class="retirarDoCarrinho btn btn-primary " key="`+bebidas.id+`" href="#">retirar do carrinho</a>
-=======
         <br>
         <div class="botao-card">
         <a class="aDoCarrinho btn btn-primary" key="`+bebidas.id+`" href="#"><b>Adicionar</b></a> <br>
         <a class="retirarDoCarrinho btn btn-primary " key="`+bebidas.id+`" href="#"><b>Retirar</b></a>
         </div>
->>>>>>> Stashed changes
         <h4> preco:`+bebidas.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</h3>
         </div>
         </div>
@@ -239,17 +224,4 @@ notaFiscal =()=>{
 mostrarTotal =()=>{
     var mostrarTotal = document.getElementById("total");
     mostrarTotal.innerHTML =` - `+total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-<<<<<<< Updated upstream
 }
- 
-
-
-
-
-
-  
-
-
-=======
-}
->>>>>>> Stashed changes
