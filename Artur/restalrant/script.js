@@ -158,6 +158,7 @@ for (var i = 0; i < links.length; i++) {
         notaFiscal();
         total= total+ Itens[key].preco ;
         efetuandoPagamento();
+        mostrarTotal();
         return false;
     })
 }
@@ -172,9 +173,11 @@ for (var i = 0; i < links2.length; i++) {
         atualizarCarrinho();
         notaFiscal();
         efetuandoPagamento();
+        mostrarTotal();
         return false;
     })
 }
+
 var total = 0;
 efetuandoPagamento =()=>{
     var efetuandoPagamento = document.getElementById("efetuarPagamento");
@@ -224,4 +227,20 @@ notaFiscal =()=>{
 mostrarTotal =()=>{
     var mostrarTotal = document.getElementById("total");
     mostrarTotal.innerHTML =` - `+total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+}
+
+function adicionaZero(numero){
+    if(numero <=9){
+        return "0"+numero
+    }
+    else{
+        return numero
+    }
+
+}
+function time(){
+    var data = new Date();
+    var time = document.getElementById("time")
+    time.innerHTML = (adicionaZero(data.getDate().toString()) + "/" + (adicionaZero(data.getMonth()+1).toString()) + "/" + data.getFullYear()+" - "+ 
+data.getHours()+`:`+data.getMinutes()+`:`+data.getSeconds());
 }

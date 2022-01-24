@@ -120,7 +120,7 @@
           <div class="modal-body" id="efetuarPagamento">
           </div>
           <div class="modal-footer">
-            <button type="Button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal2">efetuar pagamento</button>
+            <button type="Button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal2" onclick="time()">efetuar pagamento</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -136,7 +136,10 @@
             <div class="modal-body">
               <h5>Restaurante LaForneria</h5>
               <h5>Rua X, Bairro X, Cidade X</h5>
-              <h6>tempo - HH:MM:SS</h6><br>
+              <h6 id="time"></h6><br>
+              <h5 id="nome"></h5>
+              <h5 id="cpf"></h5>
+              <h5 id="form_pag"></h5>
               <div id="nota" ></div>
               <div class="nnn">
                 <h4>total </h4>
