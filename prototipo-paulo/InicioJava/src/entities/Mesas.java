@@ -1,9 +1,9 @@
 package entities;
 
 public class Mesas {
-        private String nome;
-        private String email;
-        private int mesa;
+        protected String nome;
+        protected String email;
+        protected int mesa;
 
         public Mesas(String name, String email, int mesa) {
             this.nome = name;
