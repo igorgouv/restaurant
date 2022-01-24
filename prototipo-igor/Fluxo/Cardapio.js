@@ -178,6 +178,8 @@ export class Cardapio {
         ]
 
     // Contadores Static
+
+    //Contadores de Items por Comanda.
     //Pizzas
     static quantidade_pizza0 = 0;
     static quantidade_pizza1 = 0; 

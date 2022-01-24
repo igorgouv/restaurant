@@ -59,3 +59,13 @@ export class LocalStorage extends Pedidos {
 
 
 }
+
+// Fazer um Map Clientes, pegando o val.id de cada cliente criado, retornando um html com uma tag key=val.id, fazer um 
+/*
+LocalStorage.clientes.map((val))
+if(val.id == key){
+    val.pedidos.map((val) =>{
+        HTML COM CONTEUDO DA NOTA FISCAL
+    })
+}
+*/
