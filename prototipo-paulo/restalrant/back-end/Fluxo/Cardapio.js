@@ -85,6 +85,27 @@ export class Cardapio {
             preco:28,
             tipo: "prato"
         },
+<<<<<<< Updated upstream
+=======
+        // {
+        //     id: 10,
+        //     nome: "Lasagna",
+        //     img: "https://sanremo.imgix.net/2017/05/Traditional-Lasagna-Plated-1500x1000.jpg?auto=format&w=2000",
+        //     quantidade:0,
+        //     descricao: "Receita Bolognese italiano, carne, presunto, queijo",
+        //     preco:36,
+        //     tipo: "prato"
+        // },
+        // {
+        //     id: 11,
+        //     nome: "Polpettone",
+        //     img: "https://ruarocha.files.wordpress.com/2020/10/3c58e4ac-6e7b-48fb-96c6-982726bd569c.jpg?w=1024",
+        //     quantidade:0,
+        //     descricao: "Carne com molho de tomate, tomete, cebola e salsa",
+        //     preco:39,
+        //     tipo: "prato"
+        // },
+>>>>>>> Stashed changes
     ]
 
     static pizzas = [
@@ -133,6 +154,19 @@ export class Cardapio {
                 preco:37,
                 tipo: "prato"
             },
+<<<<<<< Updated upstream
+=======
+
+            // {
+            //     id: 17,
+            //     nome: "CAMARAO",
+            //     img: "https://a-static.mlcdn.com.br/1500x1500/pizza-camarao-2-saborosa-e-caprichada/restauranteepizzariasensacao/43af3346bf2d11ebaa364201ac18500e/4fd2441426f9d641a8108ceeb9243a83.jpg",
+            //     quantidade:0,
+            //     descricao: "Queijo mussarela, camarao, cebola, salsa",
+            //     preco:45,
+            //     tipo: "prato"
+            // },
+>>>>>>> Stashed changes
     ]
         static bebidas = [
             {
@@ -145,16 +179,26 @@ export class Cardapio {
             },
             {
                 id: 16,
+<<<<<<< Updated upstream
                 nome: "H2OH",
                 img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.damataleo.com.br%2Fproduto%2Fdetalhe%2F61%2Fh20&psig=AOvVaw1ejoz_PTqkAxLmzGbyAZsy&ust=1642706734344000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKje-s_FvvUCFQAAAAAdAAAAABAD",
+=======
+                nome: "Refrigerante 1 Litro",
+                img: "https://i.pinimg.com/originals/99/70/29/997029c827d5bbd693f570196687487d.png",
+>>>>>>> Stashed changes
                 quantidade:0,
                 preco:5,
                 tipo: "liquido"
             },
             {
                 id: 17,
+<<<<<<< Updated upstream
                 nome: "Refrigerante 1 Litro",
                 img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fnossomarket.com.br%2Fpraca-de-alimentacao%2F512-refrigerante-1l.html&psig=AOvVaw3_i9OFFWOvGt1DNO6zV_LP&ust=1642706776136000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjJtuHFvvUCFQAAAAAdAAAAABAD",
+=======
+                nome: "Cerveja",
+                img: "https://exame.com/wp-content/uploads/2020/11/cerveja-gelada-e1598542702646-1.jpg",
+>>>>>>> Stashed changes
                 quantidade:0,
                 preco:10,
                 tipo: "liquido"
@@ -175,6 +219,19 @@ export class Cardapio {
                 preco:36,
                 tipo: "liquido"
             },
+<<<<<<< Updated upstream
+=======
+            
+            // {
+            //     id: 24,
+            //     nome: "Vinho Branco",
+            //     img: "https://emporioconfrades.com.br/wp-content/uploads/2019/08/tacas-de-vinho-branco.jpg",
+            //     quantidade:0,
+            //     preco:40,
+            //     tipo: "liquido"
+            // },
+            
+>>>>>>> Stashed changes
         ]
 
     // Contadores Static
