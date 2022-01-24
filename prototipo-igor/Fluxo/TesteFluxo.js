@@ -27,6 +27,9 @@ const cliente = new Pedidos("igor", "gouveia@email", "b00000");
 // O total até o momento é: R$${cliente.total},00
 // `);
 
+
+// >>>>>>>>>>>>>>>>>>>>>>>>> TESTES DE FLUXO <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 // CarrinhoPizza-------------------------------------------------------------------------------------------
 /*
 cliente.addToCartP0();
@@ -76,6 +79,81 @@ O total até o momento é: R$${cliente.total},00
 ------------------------------------------------------------------------------------------------*/
 
 /* ---------------------------Carrinho Bebidas ----------------------------------------------------------------------------------
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.addToCartB0();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.addToCartB1();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.addToCartB2();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.addToCartB3();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.addToCartB4();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.addToCartB0();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.addToCartB0();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.addToCartB0();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.addToCartB0();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.RemoveCartItemB4();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.RemoveCartItemB3();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.RemoveCartItemB2();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.RemoveCartItemB1();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.RemoveCartItemB0();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.RemoveCartItemB0();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.RemoveCartItemB0();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.RemoveCartItemB0();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
+cliente.RemoveCartItemB0();
+console.log(`O seu pedido está composto por: ${JSON.stringify(cliente.readPedidos())},
+O total até o momento é: R$${cliente.total},00
+`);
 */
 
 

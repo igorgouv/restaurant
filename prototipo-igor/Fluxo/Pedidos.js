@@ -76,17 +76,17 @@ export class Pedidos extends Cliente {
             if(encontrou == false){
                 this.pedidos.push(this.comanda)
                 this.total = this.total + this.comanda.valor;
-                console.log("Total somando")
-                console.log("Nao encontrou objeto, inserindo produto")
+                console.log("Não encontrou o objeto específico, inserindo produto!")
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 10){
-                        val.valor = Cardapio.getPizza0Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getPizza0Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getPizza0Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + this.comanda.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -129,12 +129,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 11){
-                        val.valor = Cardapio.getPizza1Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getPizza1Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getPizza1Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + this.comanda.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -177,12 +178,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 12){
-                        val.valor = Cardapio.getPizza2Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getPizza2Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getPizza2Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + this.comanda.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -225,12 +227,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 13){
-                        val.valor = Cardapio.getPizza3Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getPizza3Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getPizza3Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + this.comanda.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -273,12 +276,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 14){
-                        val.valor = Cardapio.getPizza4Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getPizza4Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getPizza4Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + this.comanda.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -322,12 +326,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 20){
-                        val.valor = Cardapio.getVegetarianoPreco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getVegetarianoPreco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getVegetarianoPreco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -371,12 +376,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 1){
-                        val.valor = Cardapio.getMassa1Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getMassa1Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getMassa1Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -418,12 +424,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 2){
-                        val.valor = Cardapio.getMassa2Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getMassa2Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getMassa2Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -465,12 +472,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 3){
-                        val.valor = Cardapio.getMassa3Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getMassa3Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getMassa3Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -512,12 +520,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 4){
-                        val.valor = Cardapio.getMassa4Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getMassa4Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getMassa4Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -559,12 +568,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 5){
-                        val.valor = Cardapio.getMassa5Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getMassa5Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getMassa5Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -607,12 +617,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 6){
-                        val.valor = Cardapio.getMassa6Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getMassa6Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getMassa6Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -655,12 +666,13 @@ export class Pedidos extends Cliente {
                 } else {
                     this.pedidos.map((val) => {
                         if(val.id == 7){
-                            val.valor = Cardapio.getMassa7Preco() * val.quantidade
+                            val.valor = parseInt(Cardapio.getMassa7Preco()) * val.quantidade
                             console.log("Encontrou objeto, Atualizando o valor do pedido")
+                            console.log(`Total anterior: ${this.total}`)
+                            this.total = this.total + parseInt(Cardapio.getMassa7Preco())
+                            console.log(`Total atual: ${this.total}`)
                         }
                     })
-                    this.total = this.total + obj.valor
-                    console.log("Total somando")
                 }         
             }
             console.log("Fim do add")
@@ -703,12 +715,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 8){
-                        val.valor = Cardapio.getMassa8Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getMassa8Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getMassa8Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -751,12 +764,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 9){
-                        val.valor = Cardapio.getMassa9Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getMassa9Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getMassa9Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -800,12 +814,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 15){
-                        val.valor = Cardapio.getBebida0Preco() * val.quantidade
+                        val.valor = parseInt(Cardapio.getBebida0Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getBebida0Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -847,12 +862,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 16){
-                        val.valor = Cardapio.getBebida1Preco() * val.quantidade
+                        val.valor = Cardapio.parseInt(getBebida1Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getBebida1Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -894,12 +910,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 17){
-                        val.valor = Cardapio.getBebida2Preco() * val.quantidade
+                        val.valor = Cardapio.parseInt(getBebida2Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getBebida2Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -941,12 +958,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 18){
-                        val.valor = Cardapio.getBebida3Preco() * val.quantidade
+                        val.valor = Cardapio.parseInt(getBebida3Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getBebida3Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -988,12 +1006,13 @@ export class Pedidos extends Cliente {
             } else {
                 this.pedidos.map((val) => {
                     if(val.id == 19){
-                        val.valor = Cardapio.getBebida4Preco() * val.quantidade
+                        val.valor = Cardapio.parseInt(getBebida4Preco()) * val.quantidade
                         console.log("Encontrou objeto, Atualizando o valor do pedido")
+                        console.log(`Total anterior: ${this.total}`)
+                        this.total = this.total + parseInt(Cardapio.getBebida4Preco())
+                        console.log(`Total atual: ${this.total}`)
                     }
                 })
-                this.total = this.total + obj.valor
-                console.log("Total somando")
             }         
         }
         console.log("Fim do add")
@@ -1049,7 +1068,7 @@ export class Pedidos extends Cliente {
                                     })
                 
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getPizza0Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1129,7 +1148,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getPizza1Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1208,7 +1227,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getPizza2Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1288,7 +1307,7 @@ export class Pedidos extends Cliente {
                                     })
 
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getPizza3Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1365,7 +1384,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getPizza4Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1445,7 +1464,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getBebida0Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1522,7 +1541,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getBebida1Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1600,7 +1619,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getBebida2Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1678,7 +1697,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getBebida3Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1756,7 +1775,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getBebida4Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1835,7 +1854,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getVegetarianoPreco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1914,7 +1933,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getMassa1Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -1993,7 +2012,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getMassa2Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -2071,7 +2090,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getMassa3Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -2149,7 +2168,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getMassa4Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -2227,7 +2246,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getMassa5Preco())
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -2305,7 +2324,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getMassa6Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -2384,7 +2403,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getMassa7Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -2462,7 +2481,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getMassa8Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
@@ -2540,7 +2559,7 @@ export class Pedidos extends Cliente {
                                         }
                                     })
                                 } else {
-                                    this.total = this.total - val.valor;
+                                    this.total = this.total - parseInt(Cardapio.getMassa9Preco());
                                     console.log(`Encontrou objeto com valor atual igual a ${val.valor} Atualizando o valor do pedido`)
                                     console.log(`O total depois é: ${this.total}`)
                                 }
