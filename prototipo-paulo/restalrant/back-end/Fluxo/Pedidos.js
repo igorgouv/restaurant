@@ -7,9 +7,8 @@ export class Pedidos extends Cliente {
     constructor(nome, email, cpf){
         super(nome, email, cpf);
         this.comanda = {}
-        this.total= 0;
+        // this.total= 0;
     }
-
     // Quando efetuar o pedido **LEMBRAR DE ZERAR TODAS AS QUANTIDADES DO CARDAPIO**
     //Zerar Todos cardápios
     static ResetQuantidades = () => {

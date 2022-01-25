@@ -1,7 +1,15 @@
+$(window).load(function()
+{
+    $('#myModal').modal('show');
+});
+
 import{Cardapio} from"./back-end/Fluxo/Cardapio.js"
 import { Cliente } from "./back-end/Fluxo/Cliente.js";
 import{Pedidos} from "./back-end/Fluxo/Pedidos.js"
 // import {notaFiscal} from "./back-end/Fluxo/NotaFiscal.js"
+
+
+
 
 
 var cliente = new Pedidos("igor", "gouveia@email", "b00000");
@@ -86,7 +94,7 @@ function atualizarCarrinho (){
         if(val.quantidade > 0){
             let x = val.preco*val.quantidade;
             conteudoDoCarrinho.innerHTML+=`
-            <p>`+val.item+` | quantidade: `+val.quantidade+` | tipo: `+val.tipo+`| preco:`+val.valor.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
+            <p>`+val.item+` | quantidade: `+val.quantidade+` | tipo: `+val.tipo+`| preco: `+val.valor.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
             <hr>
             `;
         }
@@ -127,7 +135,7 @@ function notaFiscal (){
         if(val.quantidade > 0){
             let x = val.preco*val.quantidade;
             conteudoDoCarrinho.innerHTML+=`
-            <p>`+val.quantidade+` X - `+val.nome+` - `+cliente.total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
+            <p>`+val.quantidade+` X - `+val.item+` - `+val.valor.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
             <hr>
             `;
         }
@@ -138,80 +146,95 @@ function notaFiscal (){
 function mostrarTotal (){
     var mostrarTotal = document.getElementById("total");
     mostrarTotal.innerHTML =` - `+cliente.total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+
 }
+var encontrouCadastro = false;
+
+var botao = document.getElementById("entrarLogin");
+var inputsenhalogin = document.getElementById("entrarLogin");
+var inputemaillogin = document.getElementById("entrarLogin");
+botao.addEventListener("click",function(e){
+    e.preventDefault();
+    var clientes = [];// Variavel que pega o Array de Antonio
+    clientes.map((val)=>{
+        if(val.senha == inputsenhalogin && val.email == inputemailvalue){
+            encontrouCadastro = true
+        }
+    }) 
+
+})
+
 var links = document.getElementsByClassName("aDoCarrinho");
 for (var i = 0; i < links.length; i++) {
     links[i].addEventListener("click",function(e){
         e.preventDefault();
+        var clientes = [];// Variavel que pega o Array de Antonio
+        clientes.map((val)=>{
+            if(val.nome == inputnomevalue && val.email == inputemailvalue){
+                encontrouCadastro = true
+            }
+        }) 
         let key = this.getAttribute(`key`);
-        if (key == 24) {
-            cliente.addToCar();
-        // }else if (key == 23) {
-        //     cliente.addToCartP0();
-        // }else if (key == 22) {
-        //     cliente.addToCartP0();
-        // }else if (key == 21) {
-        //     cliente.addToCartP0();
-        }else if (key== 20) {
+        if (key== 20 && encontrouCadastro == true) {
             cliente.addToCartV();
         }
-        else if (key == 19) {
+        else if (key == 19 && encontrouCadastro == true) {
             cliente.addToCartB5();
         }
-        else if (key == 18) {
+        else if (key == 18 && encontrouCadastro == true) {
             cliente.addToCartB4();
         }
-        else if (key == 17) {
+        else if (key == 17 && encontrouCadastro == true) {
             cliente.addToCartB3();
         }
-        else if (key == 16) {
+        else if (key == 16 && encontrouCadastro == true) {
             cliente.addToCartB2();
         }
-        else if (key == 16) {
+        else if (key == 16 && encontrouCadastro == true) {
             cliente.addToCartB1();
         }
-        else if (key == 15) {
+        else if (key == 15 && encontrouCadastro == true) {
             cliente.addToCartB0();
         }
-        else if (key == 14) {
+        else if (key == 14 && encontrouCadastro == true) {
             cliente.addToCartP4();
         }
-        else if (key == 13) {
+        else if (key == 13 && encontrouCadastro == true) {
             cliente.addToCartP3();
         }
-        else if (key == 12) {
+        else if (key == 12 && encontrouCadastro == true) {
             cliente.addToCartP2();
         }
-        else if (key == 11) {
+        else if (key == 11 && encontrouCadastro == true) {
             cliente.addToCartP1();
         }
-        else if (key == 10) {
+        else if (key == 10 && encontrouCadastro == true) {
             cliente.addToCartP0();
         }
-        else if (key == 9) {
+        else if (key == 9 && encontrouCadastro == true) {
             cliente.addToCartM9();
         }
-        else if (key == 8) {
+        else if (key == 8 && encontrouCadastro == true) {
             cliente.addToCartM8();
         }
-        else if (key == 7) {
+        else if (key == 7 && encontrouCadastro == true) {
             cliente.addToCartM7();
         }
-        else if (key == 6) {
+        else if (key == 6 && encontrouCadastro == true) {
             cliente.addToCartM6();
         }
-        else if (key == 5) {
+        else if (key == 5 && encontrouCadastro == true) {
             cliente.addToCartM5();
         }
-        else if (key == 4) {
+        else if (key == 4 && encontrouCadastro == true) {
             cliente.addToCartM4();
         }
-        else if (key == 3) {
+        else if (key == 3 && encontrouCadastro == true) {
             cliente.addToCartM3();
-        }else if (key == 2) {
+        }else if (key == 2 && encontrouCadastro == true) {
             cliente.addToCartM2();
         }
-        else if (key == 1) {
+        else if (key == 1 && encontrouCadastro == true) {
             cliente.addToCartM1();
         }
         notaFiscal();
@@ -226,76 +249,76 @@ var links2 = document.getElementsByClassName("retirarDoCarrinho");
 for (var i = 0; i < links2.length; i++) {
     links2[i].addEventListener("click",function(e){
         e.preventDefault();
+        var clientes = [];// Variavel que pega o Array de Antonio
+        clientes.map((val)=>{
+            if(val.nome == inputnomevalue && val.email == inputemailvalue){
+                encontrouCadastro = true
+            }
+        }) 
         let key = this.getAttribute(`key`);
-        if (key == 24) {
-            cliente.RemoveToCar();
-        // }else if (key == 23) {
-        //     cliente.addToCartP0();
-        // }else if (key == 22) {
-        //     cliente.addToCartP0();
-        // }else if (key == 21) {
-        //     cliente.addToCartP0();
-        }else if (key== 20) {
+        if (key== 20 && encontrouCadastro == true) {
             cliente.RemoveCartItemV();
         }
-        else if (key == 19) {
+        else if (key == 19 && encontrouCadastro == true) {
             cliente.RemoveCartItemB5();
         }
-        else if (key == 18) {
+        else if (key == 18 && encontrouCadastro == true) {
             cliente.RemoveCartItemB4();
         }
-        else if (key == 17) {
+        else if (key == 17 && encontrouCadastro == true) {
             cliente.RemoveCartItemB3();
         }
-        else if (key == 16) {
+        else if (key == 16 && encontrouCadastro == true) {
             cliente.RemoveCartItemB2();
         }
-        else if (key == 16) {
+        else if (key == 16 && encontrouCadastro == true) {
             cliente.RemoveCartItemB1();
         }
-        else if (key == 15) {
+        else if (key == 15 && encontrouCadastro == true) {
             cliente.RemoveCartItemB0();
         }
-        else if (key == 14) {
+        else if (key == 14 && encontrouCadastro == true) {
             cliente.RemoveCartItemP4();
         }
-        else if (key == 13) {
+        else if (key == 13 && encontrouCadastro == true) {
             cliente.RemoveCartItemP3();
         }
-        else if (key == 12) {
+        else if (key == 12 && encontrouCadastro == true) {
             cliente.RemoveCartItemP2();
         }
-        else if (key == 11) {
+        else if (key == 11 && encontrouCadastro == true) {
             cliente.RemoveCartItemP1();
         }
-        else if (key == 10) {
+        else if (key == 10 && encontrouCadastro == true) {
             cliente.RemoveCartItemP0();
         }
-        else if (key == 9) {
+        else if (key == 9 && encontrouCadastro == true) {
             cliente.RemoveCartItemM9();
         }
-        else if (key == 8) {
+        else if (key == 8 && encontrouCadastro == true) {
             cliente.RemoveCartItemM8();
         }
-        else if (key == 7) {
+        else if (key == 7 && encontrouCadastro == true) {
             cliente.RemoveCartItemM7();
         }
-        else if (key == 6) {
+        else if (key == 6 && encontrouCadastro == true) {
             cliente.RemoveCartItemM6();
         }
-        else if (key == 5) {
+        else if (key == 5 && encontrouCadastro == true) {
             cliente.RemoveCartItemM5();
         }
-        else if (key == 4) {
+        else if (key == 4 && encontrouCadastro == true) {
             cliente.RemoveCartItemM4();
         }
-        else if (key == 3) {
+        else if (key == 3 && encontrouCadastro == true) {
             cliente.RemoveCartItemM3();
-        }else if (key == 2) {
+        }else if (key == 2 && encontrouCadastro == true) {
             cliente.RemoveCartItemM2();
         }
-        else if (key == 1) {
+        else if (key == 1 && encontrouCadastro == true) {
             cliente.RemoveCartItemM1();
+        } else{
+            alert("Faca uma reserva para logar no sistema!")
         }
         atualizarCarrinho();
         notaFiscal();
@@ -304,6 +327,27 @@ for (var i = 0; i < links2.length; i++) {
         return false;
     })
 }
+
+//Clicou em imprimir NotaFiscal
+var finalizarPedidos = document.getElementById("finalizarPedido")
+    .addEventListener("click",function(e){
+        e.preventDefault();
+        Pedidos.ResetQuantidades();
+        console.log("Resetou Quantidades ao imprimir")
+    })
+
+//Sistema de Validar senha
+//Fazer um validar pra cada Botao
+function ValidarSenha (){
+    var clientes = []
+    clientes.map((val)=>{
+        if(val.nome == inputnomevalue && val.email == inputemailvalue){
+            encontrouCadastro = true
+        }
+    }) 
+}
+
+
 
 function adicionaZero(numero){
     if(numero <=9){

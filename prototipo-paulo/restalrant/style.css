@@ -71,3 +71,25 @@ body{
 .modal-body > h5,h6{
     text-align: center;
 }
+#exampleModalLabel{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.input-log{
+    align-items: center;
+    width: 450px;
+}
+
+.btn-success{
+    width: 450px;
+    
+}
+
+.modal-header img{
+    width: 8vw;
+}
+
+.modal-header{
+    
+    justify-content: space-between;
+}
