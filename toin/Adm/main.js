@@ -116,6 +116,17 @@ const editDelete = (event) => {
         }
     }
 }
+document.getElementById("nome").onkeypress = function(e) {
+    var chr = String.fromCharCode(e.which);
+    if ("qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM".indexOf(chr) < 0)
+      return false;
+  };
+
+document.getElementById("quantidade").onkeypress = function(e) {
+    var chr = String.fromCharCode(e.which);
+    if ("1234567890".indexOf(chr) < 0)
+        return false;
+    };
 
 updateTable()
 
