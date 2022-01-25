@@ -65,11 +65,11 @@
                     </header>
                   <form id="form" class="modal-form ">
                     <div class="form-floating mb-3">
-                      <input type="text" id="nome" data-index="new" class="modal-field1 form-control" placeholder=""required>
+                      <input type="text" id="nome" data-index="new" class="modal-field1 form-control" maxlength="30" placeholder=""required="required">
                       <label for="nome" class="nome">Nome Do Produto:</label>
                     </div>
                     <div class="form-floating ">
-                      <input type="number" id="quantidade" class="modal-field form-control" placeholder="" required>
+                      <input type="text" id="quantidade" class="modal-field form-control" placeholder="" maxlength="5" required="required">
                       <label for="quantidade" class="nome">Quantidade Em Estoque:</label>
                     </div>
                     </div>
@@ -116,19 +116,19 @@
                       </header>
                     <form id="form1" class="modal-form ">
                       <div class="form-floating mb-3">
-                        <input type="text" id="nomeCliente" data-index="new" class="modal-field form-control" placeholder=""required>
+                        <input type="text" id="nomeCliente" data-index="new" class="modal-field form-control" placeholder=""required="required">
                         <label for="nome" class="nome">Nome Do Cliente:</label>
                       </div>
                       <div class="input-group mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="Informe Um Email Valido" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="email" class="form-control" id="email" placeholder="Informe Um Email Valido" aria-label="Recipient's username" aria-describedby="basic-addon2" required="required">
                         <span class="input-group-text" id="basic-addon2">@example.com</span>
                       </div>
                       <div class="form-floating mb-3">
-                        <input type="text" id="quantidadeCliente" class="modal-field form-control" placeholder="" required>
+                        <input type="text" id="quantidadeCliente" class="modal-field form-control" placeholder="" maxlength="2" required="required">
                         <label for="quantidade" class="nome">Quantidade De Pessoas:</label>
                       </div>
                       <div class="form-floating mb-3">
-                        <input type="datetime-local" id="data" data-index="new" class="modal-field form-control" placeholder=""required>
+                        <input type="datetime-local" id="data" data-index="new" class="modal-field form-control" placeholder=""required="required">
                         <label for="nome" class="nome">Data Da Reserva:</label>
                       </div>
                       </div>

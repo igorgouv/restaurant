@@ -120,13 +120,13 @@ const editDelete = (event) => {
         }
     }
 }
-document.getElementById("nome").onkeypress = function(e) {
+document.getElementById("nomeCliente").onkeypress = function(e) {
     var chr = String.fromCharCode(e.which);
     if ("qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM".indexOf(chr) < 0)
       return false;
   };
 
-document.getElementById("quantidade").onkeypress = function(e) {
+document.getElementById("quantidadeCliente").onkeypress = function(e) {
     var chr = String.fromCharCode(e.which);
     if ("1234567890".indexOf(chr) < 0)
         return false;
