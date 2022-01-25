@@ -16,7 +16,7 @@ function menuDaLoja (){
                 <img src="`+val.img+`" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">`+val.nome+`</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">`+val.descricao+`</p>
                     <br>
                     <div class="botao-card">
                     <a class="aDoCarrinho btn btn-primary" key="`+val.id+`" href="#"><b>Adicionar</b></a> <br>
@@ -38,7 +38,7 @@ function menuDaLojaPizzas (){
                 <img src="`+a.img+`" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">`+a.nome+`</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">`+a.descricao+`</p>
                     <br>
                     <div class="botao-card">
                     <a class="aDoCarrinho btn btn-primary" key="`+a.id+`" href="#"><b>Adicionar</b></a> <br>
@@ -61,7 +61,7 @@ function menuDaLojaBebidas (){
             <img src="`+bebidas.img+`" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">`+bebidas.nome+`</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">`+bebidas.nome+`</p>
             <br>
             <div class="botao-card">
             <a class="aDoCarrinho btn btn-primary" key="`+bebidas.id+`" href="#"><b>Adicionar</b></a> <br>
@@ -98,12 +98,6 @@ function efetuandoPagamento (){
     efetuandoPagamento.innerHTML = `
     <form>
     <div class="row mb-3">
-    <label class="col-sm-2 col-form-label">Nome</label>
-    <div class="col-sm-8">
-    <input type="text" class="form-control" id="inputNome"  placeholder="Nome">
-    </div>
-    </div>
-    <div class="row mb-3">
     <label class="col-sm-3 col-form-label">CPF(opcional)</label>
     <div class="col-sm-7">
     <input type="number" class="form-control" id="inputCPF" placeholder="Apenas numeros">
@@ -121,29 +115,29 @@ function efetuandoPagamento (){
                           </select>
                   </div>
             </div>
-            <p>total:`+total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+` </p>
+            <p>total:`+cliente.total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+` </p>
     </form>
     `;
 }
 
-// function notaFiscal (){
-//     var conteudoDoCarrinho = document.getElementById("nota");
-//     conteudoDoCarrinho.innerHTML = "";
-//     Itens.map((val) =>{
-//         if(val.quantidade > 0){
-//             let x = val.preco*val.quantidade;
-//             conteudoDoCarrinho.innerHTML+=`
-//             <p>`+val.quantidade+` X - `+val.nome+` - `+x.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
-//             <hr>
-//             `;
-//         }
-//     })
-// }
+function notaFiscal (){
+    var conteudoDoCarrinho = document.getElementById("nota");
+    conteudoDoCarrinho.innerHTML = "";
+    cliente.readPedidos().map((val) =>{
+        if(val.quantidade > 0){
+            let x = val.preco*val.quantidade;
+            conteudoDoCarrinho.innerHTML+=`
+            <p>`+val.quantidade+` X - `+val.nome+` - `+cliente.total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+`</p>
+            <hr>
+            `;
+        }
+    })
+}
 
 
 function mostrarTotal (){
     var mostrarTotal = document.getElementById("total");
-    mostrarTotal.innerHTML =` - `+total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    mostrarTotal.innerHTML =` - `+cliente.total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 }
 var links = document.getElementsByClassName("aDoCarrinho");
 for (var i = 0; i < links.length; i++) {
@@ -220,12 +214,10 @@ for (var i = 0; i < links.length; i++) {
         else if (key == 1) {
             cliente.addToCartM1();
         }
-
+        notaFiscal();
         atualizarCarrinho();
-        // NotaFiscal.mapPedidos()
-        console.log( cliente.total);
         efetuandoPagamento();
-        // mostrarTotal()
+        mostrarTotal()
         return false;
     })
 }
@@ -306,11 +298,26 @@ for (var i = 0; i < links2.length; i++) {
             cliente.RemoveCartItemM1();
         }
         atualizarCarrinho();
-        console.log(cliente.readPedidos().valor) ;
-
-        // notaFiscal();
+        notaFiscal();
         efetuandoPagamento();
-        // mostrarTotal()
+        mostrarTotal()
         return false;
     })
 }
+
+function adicionaZero(numero){
+    if(numero <=9){
+        return "0"+numero
+    }
+    else{
+        return numero
+    }
+
+}
+function time(){
+    var data = new Date();
+    var time = document.getElementById("time")
+    time.innerHTML = (adicionaZero(data.getDate().toString()) + "/" + (adicionaZero(data.getMonth()+1).toString()) + "/" + data.getFullYear()+" - "+ 
+data.getHours()+`:`+data.getMinutes()+`:`+data.getSeconds());
+}
+time()
