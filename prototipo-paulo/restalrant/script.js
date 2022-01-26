@@ -6,7 +6,7 @@ $(window).load(function()
 import{Cardapio} from"./back-end/Fluxo/Cardapio.js"
 import { Cliente } from "./back-end/Fluxo/Cliente.js";
 import{Pedidos} from "./back-end/Fluxo/Pedidos.js"
-// import {notaFiscal} from "./back-end/Fluxo/NotaFiscal.js"
+import { readClient } from "./Adm/Client.js";
 
 
 
@@ -151,13 +151,13 @@ function mostrarTotal (){
 var encontrouCadastro = false;
 
 var botao = document.getElementById("entrarLogin");
-var inputsenhalogin = document.getElementById("entrarLogin");
-var inputemaillogin = document.getElementById("entrarLogin");
+var inputsenhalogin = document.getElementById("entrar-Login");
+var inputEmailLogin = document.getElementById("entrar-senha");
 botao.addEventListener("click",function(e){
     e.preventDefault();
-    var clientes = [];// Variavel que pega o Array de Antonio
+    var clientes = readClient();// Variavel que pega o Array de Antonio
     clientes.map((val)=>{
-        if(val.senha == inputsenhalogin && val.email == inputemailvalue){
+        if(val.senha == inputsenhalogin && val.email == inputEmailLogin){
             encontrouCadastro = true
         }
     }) 
@@ -249,9 +249,9 @@ var links2 = document.getElementsByClassName("retirarDoCarrinho");
 for (var i = 0; i < links2.length; i++) {
     links2[i].addEventListener("click",function(e){
         e.preventDefault();
-        var clientes = [];// Variavel que pega o Array de Antonio
+        var clientes = readClient();// Variavel que pega o Array de Antonio
         clientes.map((val)=>{
-            if(val.nome == inputnomevalue && val.email == inputemailvalue){
+            if(val.nome == inputsenhalogin && val.email == inputEmailLogin){
                 encontrouCadastro = true
             }
         }) 

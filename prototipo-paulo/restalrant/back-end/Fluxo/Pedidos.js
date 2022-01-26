@@ -4,8 +4,8 @@ import {Cardapio} from "./Cardapio.js";
 
 export class Pedidos extends Cliente {
     comanda;
-    constructor(nome, email, cpf){
-        super(nome, email, cpf);
+    constructor(nome, email,){
+        super(nome, email,);
         this.comanda = {}
         // this.total= 0;
     }

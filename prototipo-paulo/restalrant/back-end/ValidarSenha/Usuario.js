@@ -1,35 +1,33 @@
 export class Usuario {
         
-    constructor(nome, email, cpf){
-        if(this.constructor == Usuario){
-            throw new Error("Você não deveria instânciar um objeto do tipo Usuario diretamente, pois essa é uma classe Abstrata.")
-        }
-        this._nome = nome;
-        this._cpf = cpf;
-        this._email = email;
-        this._senha;
+    constructor(nome, email, quantidadeCliente, data){
+        // if(this.constructor == Usuario){
+        //     throw new Error("Você não deveria instânciar um objeto do tipo Usuario diretamente, pois essa é uma classe Abstrata.")
+        // }
+        this.nome = nome;
+        this.email = email;
+        this.quantidadeCliente = quantidadeCliente
+        this.data = data
+        this.senha;
     }
     
     //autenticar boolean
     autenticar(senha){
-        return senha == this._senha;
+        return senha == this.senha;
     }
     cadastrarSenha(){
-        this._senha = this._nome;
+        this.senha = this.nome;
     }
 
     // Getters
-    getNome(){return this._nome}
+    // getNome(){return this._nome}
 
-    getCpf(){return this._cpf}
+    // getEmail(){return this._email}
 
-    getEmail(){return this._email}
+    // // Setters 
+    // setNome = (nome) => this._nome = nome;
 
-    // Setters 
-    setNome = (nome) => this._nome = nome;
 
-    setCpf = (cpf) => this._cpf = cpf;
-
-    setEmail = (email) => this._email = email;
+    // setEmail = (email) => this._email = email;
     
 }
