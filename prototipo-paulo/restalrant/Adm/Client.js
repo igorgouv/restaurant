@@ -53,12 +53,15 @@ const saveClient = () => {
         var email= document.getElementById('email').value;
         var quantidadeCliente= document.getElementById('quantidadeCliente').value;
         var data= document.getElementById('data').value;
-        const client = new Usuario(nomeCliente,email,quantidadeCliente,data)
+        var aaa= "ggg"
+        var client = new Usuario(nomeCliente,email,quantidadeCliente,data,aaa)
 
-        const index = document.getElementById('nome').dataset.index
+        const index = document.getElementById('nomeCliente').dataset.index
         if (index == 'new') {
-            createClient(client)
+            console.log(`A senha antes e ${client.senha}`)
             client.cadastrarSenha()
+            console.log(`A senha de cliente depois e: ${client.senha}`)
+            createClient(client)
             updateTable()
             closeModal()
         } else {
@@ -97,7 +100,9 @@ const updateTable = () => {
 
 const fillFields = (client) => {
     document.getElementById('nomeCliente').value = client.nome
+    document.getElementById('email').value = client.email
     document.getElementById('quantidadeCliente').value = client.quantidadeCliente
+    document.getElementById('data').value = client.data
     document.getElementById('nomeCliente').dataset.index = client.index
 }
 

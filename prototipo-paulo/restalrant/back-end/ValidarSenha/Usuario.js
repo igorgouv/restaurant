@@ -1,6 +1,6 @@
 export class Usuario {
         
-    constructor(nome, email, quantidadeCliente, data){
+    constructor(nome, email, quantidadeCliente, data,senha){
         // if(this.constructor == Usuario){
         //     throw new Error("Você não deveria instânciar um objeto do tipo Usuario diretamente, pois essa é uma classe Abstrata.")
         // }
@@ -8,7 +8,7 @@ export class Usuario {
         this.email = email;
         this.quantidadeCliente = quantidadeCliente
         this.data = data
-        this.senha;
+        this.senha = senha;
     }
     
     //autenticar boolean
@@ -17,6 +17,7 @@ export class Usuario {
     }
     cadastrarSenha(){
         this.senha = this.nome;
+        console.log("Cadastrou")
     }
 
     // Getters

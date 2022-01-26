@@ -42,6 +42,7 @@ body{
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0 2px 0 2px rgba(0,0,0,.3);
+    width: 45px;
 }
 .redes{
     display: flex;
@@ -92,4 +93,7 @@ body{
 .modal-header{
     
     justify-content: space-between;
+}
+.imagemModal{
+    width: 45px;
 }

@@ -5,16 +5,17 @@ $(window).load(function()
 
 import{Cardapio} from"./back-end/Fluxo/Cardapio.js"
 import { Cliente } from "./back-end/Fluxo/Cliente.js";
-import{Pedidos} from "./back-end/Fluxo/Pedidos.js"
-import { readClient } from "./Adm/Client.js";
+import{Pedidos} from "./back-end/Fluxo/Pedidos.js";
 
 
 
+function getLocalStorage1(){
+    return JSON.parse(localStorage.getItem('db_client1'))}
 
 
 var cliente = new Pedidos("igor", "gouveia@email", "b00000");
-console.log(cliente);
-console.log(cliente.readPedidos())
+console.log(cliente.nome);
+console.log(cliente.email)
 function menuDaLoja (){
     var conteuDoPrato = document.getElementById("pratos");
     Cardapio.Massas.map((val) =>{
@@ -151,97 +152,119 @@ function mostrarTotal (){
 var encontrouCadastro = false;
 
 var botao = document.getElementById("entrarLogin");
-var inputsenhalogin = document.getElementById("entrar-Login");
-var inputEmailLogin = document.getElementById("entrar-senha");
 botao.addEventListener("click",function(e){
     e.preventDefault();
-    var clientes = readClient();// Variavel que pega o Array de Antonio
-    clientes.map((val)=>{
-        if(val.senha == inputsenhalogin && val.email == inputEmailLogin){
-            encontrouCadastro = true
+        var inputsenhalogin = document.getElementById('input-login').value;
+        var inputEmailLogin = document.getElementById('input-senha').value;
+        console.log(`O valor de ${inputsenhalogin}, ${typeof inputsenhalogin}`)
+        console.log(`O valor de ${inputEmailLogin}, ${typeof inputEmailLogin}`)
+        var array1 = inputsenhalogin.split("");
+        var array2 = inputEmailLogin.split("");
+        
+        array1 = array1.sort().join('');
+        console.log(array1)
+        array2 = array2.sort().join('');
+        console.log(array2)
+        var clientes = localStorage.getItem('db_client1');// Variavel que pega o Array de Antonio
+        var clientetrans = JSON.parse(clientes)
+        console.log(clientetrans)
+        for(var index = 0, total=clientetrans.length; index < total; index++){
+            var obj = clientetrans[index];
+            var x = obj.senha.split("")
+            var z = obj.email.split("")
+            x = x.sort().join('');
+            console.log(x)
+            z = z.sort().join('');
+            console.log(z)
+            console.log(obj.senha, typeof obj.senha, obj.email, typeof obj.email)
+            if( x == array2 && z == array1){
+                encontrouCadastro = true
+                console.log("Encontrou!")
+            }else {
+                encontrouCadastro = false
+                console.log("Nao encontrou!")
+            }
         }
-    }) 
-
+  console.log("Fim da validacao")
 })
-
 var links = document.getElementsByClassName("aDoCarrinho");
 for (var i = 0; i < links.length; i++) {
     links[i].addEventListener("click",function(e){
         e.preventDefault();
-        var clientes = [];// Variavel que pega o Array de Antonio
-        clientes.map((val)=>{
-            if(val.nome == inputnomevalue && val.email == inputemailvalue){
-                encontrouCadastro = true
+        var clientes = getLocalStorage1();// Variavel que pega o Array de Antonio
+        console.log(clientes)
+            if(encontrouCadastro == true){
+                
+                let key = this.getAttribute(`key`);
+                if (key== 20) {
+                    cliente.addToCartV();
+                }
+                else if (key == 19 ) {
+                    cliente.addToCartB5();
+                }
+                else if (key == 18 ) {
+                    cliente.addToCartB4();
+                }
+                else if (key == 17 ) {
+                    cliente.addToCartB3();
+                }
+                else if (key == 16 ) {
+                    cliente.addToCartB2();
+                }
+                else if (key == 16 ) {
+                    cliente.addToCartB1();
+                }
+                else if (key == 15 ) {
+                    cliente.addToCartB0();
+                }
+                else if (key == 14 ) {
+                    cliente.addToCartP4();
+                }
+                else if (key == 13 ) {
+                    cliente.addToCartP3();
+                }
+                else if (key == 12 ) {
+                    cliente.addToCartP2();
+                }
+                else if (key == 11 ) {
+                    cliente.addToCartP1();
+                }
+                else if (key == 10 ) {
+                    cliente.addToCartP0();
+                }
+                else if (key == 9 ) {
+                    cliente.addToCartM9();
+                }
+                else if (key == 8 ) {
+                    cliente.addToCartM8();
+                }
+                else if (key == 7 ) {
+                    cliente.addToCartM7();
+                }
+                else if (key == 6 ) {
+                    cliente.addToCartM6();
+                }
+                else if (key == 5 ) {
+                    cliente.addToCartM5();
+                }
+                else if (key == 4 ) {
+                    cliente.addToCartM4();
+                }
+                else if (key == 3 ) {
+                    cliente.addToCartM3();
+                }else if (key == 2 ) {
+                    cliente.addToCartM2();
+                }
+                else if (key == 1 ) {
+                    cliente.addToCartM1();
+                }
+                notaFiscal();
+                atualizarCarrinho();
+                efetuandoPagamento();
+                mostrarTotal()
+                return false;
             }
-        }) 
-        let key = this.getAttribute(`key`);
-        if (key== 20 && encontrouCadastro == true) {
-            cliente.addToCartV();
-        }
-        else if (key == 19 && encontrouCadastro == true) {
-            cliente.addToCartB5();
-        }
-        else if (key == 18 && encontrouCadastro == true) {
-            cliente.addToCartB4();
-        }
-        else if (key == 17 && encontrouCadastro == true) {
-            cliente.addToCartB3();
-        }
-        else if (key == 16 && encontrouCadastro == true) {
-            cliente.addToCartB2();
-        }
-        else if (key == 16 && encontrouCadastro == true) {
-            cliente.addToCartB1();
-        }
-        else if (key == 15 && encontrouCadastro == true) {
-            cliente.addToCartB0();
-        }
-        else if (key == 14 && encontrouCadastro == true) {
-            cliente.addToCartP4();
-        }
-        else if (key == 13 && encontrouCadastro == true) {
-            cliente.addToCartP3();
-        }
-        else if (key == 12 && encontrouCadastro == true) {
-            cliente.addToCartP2();
-        }
-        else if (key == 11 && encontrouCadastro == true) {
-            cliente.addToCartP1();
-        }
-        else if (key == 10 && encontrouCadastro == true) {
-            cliente.addToCartP0();
-        }
-        else if (key == 9 && encontrouCadastro == true) {
-            cliente.addToCartM9();
-        }
-        else if (key == 8 && encontrouCadastro == true) {
-            cliente.addToCartM8();
-        }
-        else if (key == 7 && encontrouCadastro == true) {
-            cliente.addToCartM7();
-        }
-        else if (key == 6 && encontrouCadastro == true) {
-            cliente.addToCartM6();
-        }
-        else if (key == 5 && encontrouCadastro == true) {
-            cliente.addToCartM5();
-        }
-        else if (key == 4 && encontrouCadastro == true) {
-            cliente.addToCartM4();
-        }
-        else if (key == 3 && encontrouCadastro == true) {
-            cliente.addToCartM3();
-        }else if (key == 2 && encontrouCadastro == true) {
-            cliente.addToCartM2();
-        }
-        else if (key == 1 && encontrouCadastro == true) {
-            cliente.addToCartM1();
-        }
-        notaFiscal();
-        atualizarCarrinho();
-        efetuandoPagamento();
-        mostrarTotal()
-        return false;
+            alert("Voce precisa logar")
     })
 }
 //For Fluxo Remover Carrinho
@@ -249,103 +272,84 @@ var links2 = document.getElementsByClassName("retirarDoCarrinho");
 for (var i = 0; i < links2.length; i++) {
     links2[i].addEventListener("click",function(e){
         e.preventDefault();
-        var clientes = readClient();// Variavel que pega o Array de Antonio
-        clientes.map((val)=>{
-            if(val.nome == inputsenhalogin && val.email == inputEmailLogin){
-                encontrouCadastro = true
+            if(encontrouCadastro == true){
+                
+                let key = this.getAttribute(`key`);
+                if (key== 20 ) {
+                    cliente.RemoveCartItemV();
+                }
+                else if (key == 19 ) {
+                    cliente.RemoveCartItemB5();
+                }
+                else if (key == 18 ) {
+                    cliente.RemoveCartItemB4();
+                }
+                else if (key == 17 ) {
+                    cliente.RemoveCartItemB3();
+                }
+                else if (key == 16 ) {
+                    cliente.RemoveCartItemB2();
+                }
+                else if (key == 16 ) {
+                    cliente.RemoveCartItemB1();
+                }
+                else if (key == 15 ) {
+                    cliente.RemoveCartItemB0();
+                }
+                else if (key == 14 ) {
+                    cliente.RemoveCartItemP4();
+                }
+                else if (key == 13 ) {
+                    cliente.RemoveCartItemP3();
+                }
+                else if (key == 12 ) {
+                    cliente.RemoveCartItemP2();
+                }
+                else if (key == 11 ) {
+                    cliente.RemoveCartItemP1();
+                }
+                else if (key == 10 ) {
+                    cliente.RemoveCartItemP0();
+                }
+                else if (key == 9 ) {
+                    cliente.RemoveCartItemM9();
+                }
+                else if (key == 8 ) {
+                    cliente.RemoveCartItemM8();
+                }
+                else if (key == 7 ) {
+                    cliente.RemoveCartItemM7();
+                }
+                else if (key == 6 ) {
+                    cliente.RemoveCartItemM6();
+                }
+                else if (key == 5 ) {
+                    cliente.RemoveCartItemM5();
+                }
+                else if (key == 4 ) {
+                    cliente.RemoveCartItemM4();
+                }
+                else if (key == 3 ) {
+                    cliente.RemoveCartItemM3();
+                }else if (key == 2 ) {
+                    cliente.RemoveCartItemM2();
+                }
+                else if (key == 1 ) {
+                    cliente.RemoveCartItemM1();
+                } else{
+                    alert("Faca uma reserva para logar no sistema!")
+                }
+                atualizarCarrinho();
+                notaFiscal();
+                efetuandoPagamento();
+                mostrarTotal()
+                return false;
             }
-        }) 
-        let key = this.getAttribute(`key`);
-        if (key== 20 && encontrouCadastro == true) {
-            cliente.RemoveCartItemV();
-        }
-        else if (key == 19 && encontrouCadastro == true) {
-            cliente.RemoveCartItemB5();
-        }
-        else if (key == 18 && encontrouCadastro == true) {
-            cliente.RemoveCartItemB4();
-        }
-        else if (key == 17 && encontrouCadastro == true) {
-            cliente.RemoveCartItemB3();
-        }
-        else if (key == 16 && encontrouCadastro == true) {
-            cliente.RemoveCartItemB2();
-        }
-        else if (key == 16 && encontrouCadastro == true) {
-            cliente.RemoveCartItemB1();
-        }
-        else if (key == 15 && encontrouCadastro == true) {
-            cliente.RemoveCartItemB0();
-        }
-        else if (key == 14 && encontrouCadastro == true) {
-            cliente.RemoveCartItemP4();
-        }
-        else if (key == 13 && encontrouCadastro == true) {
-            cliente.RemoveCartItemP3();
-        }
-        else if (key == 12 && encontrouCadastro == true) {
-            cliente.RemoveCartItemP2();
-        }
-        else if (key == 11 && encontrouCadastro == true) {
-            cliente.RemoveCartItemP1();
-        }
-        else if (key == 10 && encontrouCadastro == true) {
-            cliente.RemoveCartItemP0();
-        }
-        else if (key == 9 && encontrouCadastro == true) {
-            cliente.RemoveCartItemM9();
-        }
-        else if (key == 8 && encontrouCadastro == true) {
-            cliente.RemoveCartItemM8();
-        }
-        else if (key == 7 && encontrouCadastro == true) {
-            cliente.RemoveCartItemM7();
-        }
-        else if (key == 6 && encontrouCadastro == true) {
-            cliente.RemoveCartItemM6();
-        }
-        else if (key == 5 && encontrouCadastro == true) {
-            cliente.RemoveCartItemM5();
-        }
-        else if (key == 4 && encontrouCadastro == true) {
-            cliente.RemoveCartItemM4();
-        }
-        else if (key == 3 && encontrouCadastro == true) {
-            cliente.RemoveCartItemM3();
-        }else if (key == 2 && encontrouCadastro == true) {
-            cliente.RemoveCartItemM2();
-        }
-        else if (key == 1 && encontrouCadastro == true) {
-            cliente.RemoveCartItemM1();
-        } else{
-            alert("Faca uma reserva para logar no sistema!")
-        }
-        atualizarCarrinho();
-        notaFiscal();
-        efetuandoPagamento();
-        mostrarTotal()
-        return false;
+            alert("Voce precisa logar")
     })
 }
 
 //Clicou em imprimir NotaFiscal
-var finalizarPedidos = document.getElementById("finalizarPedido")
-    .addEventListener("click",function(e){
-        e.preventDefault();
-        Pedidos.ResetQuantidades();
-        console.log("Resetou Quantidades ao imprimir")
-    })
-
-//Sistema de Validar senha
-//Fazer um validar pra cada Botao
-function ValidarSenha (){
-    var clientes = []
-    clientes.map((val)=>{
-        if(val.nome == inputnomevalue && val.email == inputemailvalue){
-            encontrouCadastro = true
-        }
-    }) 
-}
 
 
 
@@ -364,4 +368,4 @@ function time(){
     time.innerHTML = (adicionaZero(data.getDate().toString()) + "/" + (adicionaZero(data.getMonth()+1).toString()) + "/" + data.getFullYear()+" - "+ 
 data.getHours()+`:`+data.getMinutes()+`:`+data.getSeconds());
 }
-time()
+time();
