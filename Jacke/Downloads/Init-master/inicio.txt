@@ -1,0 +1,11 @@
+1. Create a branch with the following format: "000-FirstLastname"
+
+2. Add your first and last name to the first commit. the commit message should read "Add My first Name and Last Name"
+
+3. send a pull request.
+
+4. go back to your branch add your full name and commit.
+
+5. Make a single commit by adding your age and the city where you live.
+
+6. Send the pull request to Diogomes.

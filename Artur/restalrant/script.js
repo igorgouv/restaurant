@@ -238,6 +238,7 @@ function adicionaZero(numero){
     }
 
 }
+
 function time(){
     var data = new Date();
     var time = document.getElementById("time")
